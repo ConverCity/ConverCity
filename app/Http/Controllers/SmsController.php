@@ -1,4 +1,4 @@
-<?php namespace SMAHTCity;
+<?php namespace SMAHTCity\Http\Controllers;
 
 use SMAHTCity\Http\Requests;
 use SMAHTCity\Http\Controllers\Controller;
