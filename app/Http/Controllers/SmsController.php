@@ -85,7 +85,7 @@ class SmsController extends Controller {
 		$client = new \Services_Twilio($account_sid, $auth_token);
 		if(isset($to))
 		{
-			if($input['fake'])
+			if(isset($input['fake']))
 			{
 				return view('fake-phone', compact('message', 'citizen', 'body'));
 			}
