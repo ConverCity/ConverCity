@@ -18,7 +18,7 @@ Route::get('/', 'WelcomeController@index');
 
 Route::get('home', 'HomeController@index');
 
-Route::get('question-tree', 'WelcomeController@questionTree');
+Route::get('question-tree', 'StaticPages@questionTree');
 
 Route::controllers([
 	'auth' => 'Auth\AuthController',

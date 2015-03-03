@@ -83,6 +83,7 @@ class SmsController extends Controller {
 		$account_sid = env('TWI_SID');
 		$auth_token = env('TWI_TOKEN');
 		$client = new \Services_Twilio($account_sid, $auth_token);
+
 		if(isset($to))
 		{
 			if(isset($input['fake']))
