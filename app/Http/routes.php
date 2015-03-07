@@ -26,5 +26,6 @@ Route::controllers([
 ]);
 
 Route::resources([
-	'question' => 'QuestionController'
+	'question' => 'QuestionController',
+	'variable' => 'VariableController'
 	]);
