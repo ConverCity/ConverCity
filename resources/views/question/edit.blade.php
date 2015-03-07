@@ -43,7 +43,6 @@
                     <ul class="list-group">
                         <span id="variables">
                         @if($question->variables()->count() > 0)
-
                         @foreach($question->variables as $variable)
                             <li class="list-group-item">{{$variable->name}}</li>
                         @endforeach
@@ -71,19 +70,23 @@
                         <div class="well">
                         <h4>{{$quest->question}}</h4>
                         <p>{{$quest->keywords}}</p>
-                            <div>
-                            <strong>Associate a variable</strong><br>
-                                @foreach($question->variables as $key => $qv)
+                            <strong>Associated Values</strong><br>
+                            @foreach(\SMAHTCity\Value::where('question_id', $quest->id)->get() as $value)
+                            {{$value->field->name}}: <i>true</i><br>
+                            @endforeach
+
+                            <strong>Associate a Values</strong><br>
+                                @foreach($question->variables as $qv)
                                     <i>{{$qv->name}}</i>
-                                    <select id="q-{{$quest->id}}-qv-{{$qv->id}}">
-                                            <option>Select One</option>
-                                        @foreach($qv->values as $field)
-                                            <option value="{{$field->id}}">{{$field->value}}</option>
+                                    <select id="v-{{$qv->id}}-q-{{$quest->id}}" name="question_variable" class="form-control">
+                                            <option value="">Select One</option>
+                                        @foreach($qv->fields as $field)
+                                            <option value="{{$field->id}}">{{$field->name}}</option>
                                         @endforeach
                                     </select>
-                                    <button class="btn btn-xs" onclick="saveVarVal(q-{{$quest->id}}-qv-{{$qv->id}}); return false;">Save</button><br>
+                                    <button class="btn btn-xs" onclick="saveVarVal({{$qv->id}}, {{$quest->id}}); return false;">Save</button><br>
                                 @endforeach
-                            </div>
+                            
                             <hr>
                             <form method="POST" action="/question/{{$quest->id}}">
                                 <input type="hidden" name="_token" value="{{ csrf_token() }}">
@@ -176,22 +179,29 @@
         var question = {{$question->id}};
         var url = '/variable/attach/' + question + '/' + variable;
             
-        var xmlRequest = $.ajax({
+        $.ajax({
               url: url,
               type: "GET",
-            }).done(function() {
-              
+            }).done(function( item ) {
+              $('#variable-list').removeClass('hidden');
+            $( item ).appendTo("#variables");
             });
 
-        xmlRequest.done(function( item ) {
-            $('#variable-list').removeClass('hidden');
-            $( item ).appendTo("#variables");
-        } );
+       
     }
 
-    function saveVarVal(id)
-    {
-        var varVal = document.getElementById(id).value;
+    function saveVarVal(varID, quesID)
+    {   
+        var calledId = 'v-' + varID + '-q-' + quesID;
+        var fieldID = document.getElementById(calledId).value;
+        var url = '/variable/attach-value/' + varID + '/' + quesID + '/' + fieldID;  
+        var content = {"_token": "{{ csrf_token() }}"};
+
+        $.ajax({
+            url: url,
+            type: "POST",
+            data: content
+        })
 
     }
     </script>

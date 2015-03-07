@@ -15,8 +15,11 @@ class CreateValuesTable extends Migration {
 		Schema::create('values', function(Blueprint $table)
 		{
 			$table->increments('id');
-			$table->integer('variable_id');
-			$table->string('value');
+			$table->integer('question_id');
+			$table->integer('field_id')->nullable();
+			$table->string('string_value')->nullable();
+			$table->boolean('boolean_value')->nullable();
+			$table->integer('integer_value')->nullable();
 			$table->timestamps();
 		});
 	}

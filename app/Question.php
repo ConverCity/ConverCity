@@ -35,8 +35,13 @@ class Question extends Model {
         return $this->morphToMany('\SMAHTCity\Variable', 'variableable');
     }
 
-    public function value()
+    public function anwsers()
     {
-        return $this->belongsToMany('\SMAHTCity\Value');
+        return $this->hasMany('\SMAHTCity\Value');
+    }
+
+    public function fields()
+    {
+        return $this->belongsToMany('\SMAHTCity\Field');
     }
 }

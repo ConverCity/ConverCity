@@ -56,7 +56,7 @@ class VariableController extends Controller {
 			//create and save the values
 			foreach($request->get('variables') as $variable)
 			{
-				$var->values()->create(['value' => $variable, 'variable_id' => $var->id]);
+				$var->fields()->create(['name' => $variable, 'type' => $var->type]);
 			}
 			
 		//create variable table
@@ -88,6 +88,25 @@ class VariableController extends Controller {
 		$question->variables()->attach($variable);
 
 		return '<li class="list-group-item">' . $variable->name . '</li>';
+	}
+
+	public function postAttachValue($var, $ques, $field)
+	{
+		$variable = \SMAHTCity\Variable::find($var);
+		$question = \SMAHTCity\Question::find($ques);
+		//This needs to be refactord for non boolean fields
+		$value = \SMAHTCity\Value::firstOrNew( [ 'question_id' => $question->id, 'field_id' => $field  ]);
+		if($variable->type == 'boolean')
+			$value->boolean_value = true;
+
+		if($value->save())
+			{return Response('Success', 200);}
+		else
+		{
+			return Response('Server Error', 500);
+		}
+
+		
 	}
 
 }

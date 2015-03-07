@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateVariablesTable extends Migration {
+class CreateFieldsTable extends Migration {
 
 	/**
 	 * Run the migrations.
@@ -12,11 +12,11 @@ class CreateVariablesTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('variables', function(Blueprint $table)
+		Schema::create('fields', function(Blueprint $table)
 		{
 			$table->increments('id');
+			$table->integer('variable_id');
 			$table->string('name');
-			$table->string('table')->unique();
 			$table->string('type');
 			$table->timestamps();
 		});
@@ -29,7 +29,7 @@ class CreateVariablesTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('variables');
+		Schema::drop('fields');
 	}
 
 }

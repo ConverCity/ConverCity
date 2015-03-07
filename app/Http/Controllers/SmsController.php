@@ -72,6 +72,22 @@ class SmsController extends Controller {
             }
         }
 
+    //check if there is a next question
+        if($next_question !== null)
+        {
+
+        //check if there associated values
+            if($next_question->values()->count() > 0)
+            {
+
+            //log values
+                foreach($next_question->values as $value)
+                {
+                    
+                }
+            }
+
+        }
     //Genderate $to variable
 		if(isset($input['From'])) { $to = $input['From']; }
 

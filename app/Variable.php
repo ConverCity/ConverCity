@@ -6,9 +6,9 @@ class Variable extends Model {
 
 	protected $fillable = ['name', 'table', 'fields'];
 
-	public function values()
+	public function fields()
 	{
-		return $this->hasMany('\SMAHTCity\Value');
+		return $this->hasMany('\SMAHTCity\Field');
 	}
 
 }

@@ -4,16 +4,16 @@ use Illuminate\Database\Eloquent\Model;
 
 class Value extends Model {
 
-	protected $fillable = ['variable_id', 'value'];
+	protected $fillable = ['question_id', 'field_id', 'string_value', 'boolean_value', 'integer_value'];
 
-	public function variable()
+	public function field()
 	{
-		return $this->belongsTo('\SMARTCity\Variable');
+		return $this->belongsTo('\SMAHTCity\Field');
 	}
 
-	public function questions()
+	public function question()
 	{
-		return $this->belongsToMany('\SMARTCity\Question');
+		return $this->belongsTo('\SMAHTCity\Question');
 	}
 
 }

@@ -39,6 +39,7 @@
 				<ul class="nav navbar-nav">
 					<li><a href="/question/">Questions</a></li>
 					<li><a href="/question-tree/">Question Tree</a></li>
+					<li><a href="/variable/create">Create Variable</a></li>
 					<li><a href="/sms-interface?method=fake-phone">Fake Phone</a></li>
 				</ul>
 
