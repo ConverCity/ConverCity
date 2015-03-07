@@ -37,6 +37,7 @@ class QuestionController extends Controller {
 	{
         $q = new \SMAHTCity\Question;
         $q->question = $request->get('question');
+        $q->answer = $request->get('answer');
         $q->keywords = $request->get('keywords');
         if($parent_id = $request->get('parent_id'))
         {$q->parent_id = $parent_id;}
@@ -87,6 +88,7 @@ class QuestionController extends Controller {
 	{
         $q = \SMAHTCity\Question::find($id);
         $q->question = $request->get('question');
+        $q->answer = $request->get('answer');
         $q->keywords = $request->get('keywords');
         if($parent_id = $request->get('parent_id'))
         {$q->parent = $parent_id;}

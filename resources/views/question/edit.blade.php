@@ -16,6 +16,10 @@
                     <input type="hidden" name="_method" value ="PUT">
                     <input type="hidden" name="_token" value="{{ csrf_token() }}">
                     <div class="form-group">
+                        <label for="question">Answer</label>
+                        <input type="text" value="{{$question->answer}}" class="form-control" name="answer" placeholder="Expected anwser...">
+                    </div>
+                    <div class="form-group">
                         <label for="question">Question</label>
                         <input type="text" value="{{$question->question}}" class="form-control" name="question" placeholder="Ask your question...">
                     </div>
@@ -29,15 +33,17 @@
                 </form>
 
                 <h4>Attach to Variable</h4>
+                <form>
                 <div class="form-inline">
-                    <select id='variable_id' name="variable">
+                    <select class="form-control col-sm-6"id='variable_id' name="variable">
                         <option  value="">Select One</option>
                         @foreach(\SMAHTCity\Variable::all() as $var)
                             <option value="{{$var->id}}">{{$var->name}}</option>
                         @endforeach
                         </select>
-                    <button onClick="attachVariable(); return false;">Attach</button>
+                    <button class="btn btn-primary btn-sm" onClick="attachVariable(); return false;">Attach</button>
                 </div>
+                </form>
                 <div id="variable-list" @if($question->variables()->count() == 0) class='hidden' @endif>
                 <h4>Related Variables</h4>
                     <ul class="list-group">
@@ -68,12 +74,17 @@
                 @foreach($children as $quest)
                     <div class="col-sm-5">
                         <div class="well">
-                        <h4>{{$quest->question}}</h4>
-                        <p>{{$quest->keywords}}</p>
+                        <p><strong>Answer: </strong>{{$quest->answer}}</p>
+                        <p><strong>Question:</strong> {{$quest->question}}</p>
+                        <p><strong>Keywords:</strong>
+                        {{$quest->keywords}}</p>
+                            @if($question->variables()->count() > 0)
                             <strong>Associated Values</strong><br>
-                            @foreach(\SMAHTCity\Value::where('question_id', $quest->id)->get() as $value)
+                            @forelse(\SMAHTCity\Value::where('question_id', $quest->id)->get() as $value)
                             {{$value->field->name}}: <i>true</i><br>
-                            @endforeach
+                            @empty
+                            <i>None</i>
+                            @endforelse
 
                             <strong>Associate a Values</strong><br>
                                 @foreach($question->variables as $qv)
@@ -86,7 +97,7 @@
                                     </select>
                                     <button class="btn btn-xs" onclick="saveVarVal({{$qv->id}}, {{$quest->id}}); return false;">Save</button><br>
                                 @endforeach
-                            
+                            @endif
                             <hr>
                             <form method="POST" action="/question/{{$quest->id}}">
                                 <input type="hidden" name="_token" value="{{ csrf_token() }}">

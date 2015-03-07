@@ -16,6 +16,7 @@ class MakeQuestionsTables extends Migration {
 		{
 			$table->increments('id');
 			$table->string('question');
+			$table->text('answer');
 			$table->text('keywords');
 			$table->text('options');
             $table->integer('topic_id');
