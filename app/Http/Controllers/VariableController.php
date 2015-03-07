@@ -2,6 +2,8 @@
 
 use SMAHTCity\Http\Requests;
 use SMAHTCity\Http\Controllers\Controller;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Database\Migrations\Migration;
 
 use Illuminate\Http\Request;
 
@@ -32,9 +34,44 @@ class VariableController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function store()
+	public function store(Request $request)
 	{
-		//
+		$table_name = 'var-' . \SMAHTCity\SMS311::cleanName($var->name);
+
+		if(\SMAHTCity\Variable::where('table' => $table_name)->exists())
+		{
+			\Session::flash('flash_warning', 'Variable name already exists, please try again.');
+			return redirect()->back();
+		}
+		
+		//create record of variable
+			$var = new \SMAHTCity\Variable;
+			$var->name = $request->get('name');
+			// Sanatize and set table name
+			$var->table = $table_name;
+			$var->type = $request->get('type');
+			$var->fields = json_encode($request->get('variables'));
+			// save variable record
+			$var->save();
+		//create variable table
+			\Schema::create($table_name, function(Blueprint $table) use ($var, $request)
+			{
+				$table->increments('id');
+				if($var->type == 'boolean')
+					foreach ($request->get('variables') as $variable) {
+						$table->boolean(\SMAHTCity\SMS311::cleanName($variable));
+					}
+				elseif($var->type == 'string')
+					foreach ($request->get('variables') as $variable) {
+						$table->string(\SMAHTCity\SMS311::cleanName($variable));
+					}
+				elseif($var->type == 'integer')
+					foreach ($request->get('variables') as $variable) {
+						$table->integer(\SMAHTCity\SMS311::cleanName($variable));
+					}
+			});
+
+			return redirect()->back();
 	}
 
 	/**

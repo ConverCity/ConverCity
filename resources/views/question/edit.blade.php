@@ -27,6 +27,17 @@
                         <input type="submit" class='btn btn-primary' value="Update">
                     </div>
                 </form>
+
+                <h4>Attach to Variable</h4>
+                <form class="form-inline">
+                    <select name="variable">
+                        <option value="">Select One</option>
+                        @foreach(\SMAHTCity\Variable::all() as $var)
+                            <option value="{{$var->id}}">{{$var->name}}</option>
+                        @endforeach
+                        </select>
+                    <button onClick="attachVariable(); return: false;">Attach</button>
+                </form>
             </div>
         </div> <!-- / Question Form -->
         @if($question->responses()->count() > 0)

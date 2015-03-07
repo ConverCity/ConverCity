@@ -84,4 +84,11 @@ class SMS311 extends Controller {
 		return json_encode($words);
 
 	}
+
+	public static function cleanName($name){
+    $name = strtolower($name);
+    $name = preg_replace('/[^a-z0-9 -]+/', '', $name);
+    $name = str_replace(' ', '-', $name);
+    return trim($name, '-');
+}
 }

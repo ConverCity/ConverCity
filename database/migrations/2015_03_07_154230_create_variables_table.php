@@ -16,7 +16,8 @@ class CreateVariablesTable extends Migration {
 		{
 			$table->increments('id');
 			$table->string('name');
-			$table->string('table');
+			$table->string('table')->unique();
+			$table->string('type');
 			$table->text('fields');
 			$table->timestamps();
 		});

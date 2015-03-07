@@ -10,14 +10,14 @@
                 <div class="form-group">
                         <label class="control-label col-sm-3">Variable Value</label>
                         <div class="col-sm-9">
-                        <input class="form-control" name="variable_name">
+                        <input class="form-control" name="name">
                         </div>
                     </div> 
 
                 <div class="form-group">
                         <label class="control-label col-sm-3">Variable Type</label>
                         <div class="col-sm-9">
-                            <select class="form-control" name="type[]">
+                            <select class="form-control" name="type">
                             <option value=''> Select One </option>
                             <option value='boolean'> True or False </option>
                             <option value='string'> String </option>
