@@ -2,10 +2,15 @@
 
 @section('content')
     <div class="row">
+        @if($question->responses()->count() > 0)
         <div class="col-md-offset-1 col-md-5">
+        @else
+        <div class="col-md-offset-1 col-md-10">
+        @endif
             <div class="well">
-                <a class="btn btn-primary pull-right" href="/question/{{$question->parent_id}}">Edit Parent Question</a>
-
+                @if($question->parent_id != null)
+                    <a class="btn btn-primary pull-right" href="/question/{{$question->parent_id}}">Edit Parent Question</a>
+                @endif
                 <h3>Edit Question</h3>
                 <form method="POST" action="/question/{{$question->id}}">
                     <input type="hidden" name="_method" value ="PUT">
@@ -24,13 +29,17 @@
                 </form>
             </div>
         </div> <!-- / Question Form -->
+        @if($question->responses()->count() > 0)
         <div class="col-md-6"> <!-- Word Cloud -->
+            <h4>Word cloud from {{$question->responses()->count()}} responses</h4>
             <div id="word-cloud"></div>
         </div> <!-- / Word Cloud -->
+        @endif
     </div>
-    <h3>Possible Answers</h3>
+    
     <div class="row">
         <div class="col-md-offset-1 col-lg-10">
+        <h3>Possible Answers</h3>
             <div class="row">
 
 
