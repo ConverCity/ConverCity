@@ -77,11 +77,11 @@ class SmsController extends Controller {
         {
 
         //check if there associated values
-            if($next_question->values()->count() > 0)
+            if(\SMAHTCity\Value::where('question_id', $next_question->id)->count() > 0)
             {
 
             //log values
-                foreach($next_question->values as $value)
+                foreach(\SMAHTCity\Value::where('question_id', $next_question->id)->get() as $value)
                 {
                     
                 }
