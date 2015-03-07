@@ -1,4 +1,4 @@
-<?php namespace SMAHTCity\Http\Controllers;
+<?php namespace SMAHTCity;
 
 use SMAHTCity\Http\Requests;
 use SMAHTCity\Http\Controllers\Controller;
@@ -60,5 +60,28 @@ class SMS311 extends Controller {
 					{$response = \SMAHTCity\Question::find($id);}
 
 			return $response;
+	}
+
+	public static function questionWords($id)
+	{
+		$question = \SMAHTCity\Question::find($id);
+
+		// Create words variable
+		$words = [];
+
+		if($question->responses == null)
+		{
+			return false;
+		}
+
+		// Add words to array
+		foreach($question->responses as $response)
+		{
+			$newWords = explode(' ', $response->response);
+			$words = array_merge($newWords, $words);
+		}
+
+		return json_encode($words);
+
 	}
 }

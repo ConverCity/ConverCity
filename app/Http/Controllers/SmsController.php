@@ -46,13 +46,17 @@ class SmsController extends Controller {
             $response->save();
         }
 
+
+
         // Test the body
         $body = $input['Body'];
         if(isset($body)) {
             if (isset($last_question)) {
-                $next_question = SMS311::compareToQuestion($body, $last_question);
+                $next_question = \SMAHTCity\SMS311::compareToQuestion($body, $last_question);
+                $response->question_id = $last_question->id;
+                $response->save();
             } else {
-                $next_question = SMS311::compareToQuestion($body);
+                $next_question = \SMAHTCity\SMS311::compareToQuestion($body);
             }
 
             if($next_question == null) {
