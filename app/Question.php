@@ -29,4 +29,14 @@ class Question extends Model {
     {
         return $query->where('is_topic', true);
     }
+
+    public function variables()
+    {
+        return $this->morphToMany('\SMAHTCity\Variable', 'variableable');
+    }
+
+    public function value()
+    {
+        return $this->belongsToMany('\SMAHTCity\Value');
+    }
 }

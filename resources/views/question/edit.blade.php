@@ -29,15 +29,29 @@
                 </form>
 
                 <h4>Attach to Variable</h4>
-                <form class="form-inline">
-                    <select name="variable">
-                        <option value="">Select One</option>
+                <div class="form-inline">
+                    <select id='variable_id' name="variable">
+                        <option  value="">Select One</option>
                         @foreach(\SMAHTCity\Variable::all() as $var)
                             <option value="{{$var->id}}">{{$var->name}}</option>
                         @endforeach
                         </select>
-                    <button onClick="attachVariable(); return: false;">Attach</button>
-                </form>
+                    <button onClick="attachVariable(); return false;">Attach</button>
+                </div>
+                <div id="variable-list" @if($question->variables()->count() == 0) class='hidden' @endif>
+                <h4>Related Variables</h4>
+                    <ul class="list-group">
+                        <span id="variables">
+                        @if($question->variables()->count() > 0)
+
+                        @foreach($question->variables as $variable)
+                            <li class="list-group-item">{{$variable->name}}</li>
+                        @endforeach
+                        @endif
+                        </span>
+                    </ul>
+                </div>
+                
             </div>
         </div> <!-- / Question Form -->
         @if($question->responses()->count() > 0)
@@ -52,21 +66,33 @@
         <div class="col-md-offset-1 col-lg-10">
         <h3>Possible Answers</h3>
             <div class="row">
-
-
-
-                @foreach($children as $qest)
+                @foreach($children as $quest)
                     <div class="col-sm-5">
                         <div class="well">
-                        <h4>{{$qest->question}}</h4>
-                        <p>{{$qest->keywords}}</p>
-                            <form method="POST" action="/question/{{$qest->id}}">
+                        <h4>{{$quest->question}}</h4>
+                        <p>{{$quest->keywords}}</p>
+                            <div>
+                            <strong>Associate a variable</strong><br>
+                                @foreach($question->variables as $key => $qv)
+                                    <i>{{$qv->name}}</i>
+                                    <select id="q-{{$quest->id}}-qv-{{$qv->id}}">
+                                            <option>Select One</option>
+                                        @foreach($qv->values as $field)
+                                            <option value="{{$field->id}}">{{$field->value}}</option>
+                                        @endforeach
+                                    </select>
+                                    <button class="btn btn-xs" onclick="saveVarVal(q-{{$quest->id}}-qv-{{$qv->id}}); return false;">Save</button><br>
+                                @endforeach
+                            </div>
+                            <hr>
+                            <form method="POST" action="/question/{{$quest->id}}">
                                 <input type="hidden" name="_token" value="{{ csrf_token() }}">
                                 <input type="hidden" name="_method" value="DELETE">
-                                <a class="btn btn-primary" href="/question/{{$qest->id}}/edit">Edit</a>
+                                <a class="btn btn-primary" href="/question/{{$quest->id}}/edit">Edit</a>
 
                                 <button type="submit" class="btn btn-danger btn-mini">Delete</button>
                             </form>
+                            
                         </div>
                     </div>
                 @endforeach
@@ -139,8 +165,36 @@
             })
             .text(function(d) { return d.text; });
       }
+
     </script>
     @endif
+
+    <script>
+    function attachVariable()
+    {
+        var variable = document.getElementById('variable_id').value;
+        var question = {{$question->id}};
+        var url = '/variable/attach/' + question + '/' + variable;
+            
+        var xmlRequest = $.ajax({
+              url: url,
+              type: "GET",
+            }).done(function() {
+              
+            });
+
+        xmlRequest.done(function( item ) {
+            $('#variable-list').removeClass('hidden');
+            $( item ).appendTo("#variables");
+        } );
+    }
+
+    function saveVarVal(id)
+    {
+        var varVal = document.getElementById(id).value;
+
+    }
+    </script>
 
 
 @stop

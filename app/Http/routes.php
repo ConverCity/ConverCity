@@ -23,9 +23,10 @@ Route::get('question-tree', 'StaticPages@questionTree');
 Route::controllers([
 	'auth' => 'Auth\AuthController',
 	'password' => 'Auth\PasswordController',
+	'variable' => 'VariableController'
 ]);
 
 Route::resources([
 	'question' => 'QuestionController',
-	'variable' => 'VariableController'
+	
 	]);

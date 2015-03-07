@@ -24,7 +24,7 @@ class VariableController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function create()
+	public function getCreate()
 	{
 		return view('variable.create');
 	}
@@ -34,11 +34,11 @@ class VariableController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function store(Request $request)
+	public function postStore(Request $request)
 	{
-		$table_name = 'var-' . \SMAHTCity\SMS311::cleanName($var->name);
+		$table_name = 'var-' . \SMAHTCity\SMS311::cleanName($request->get('name'));
 
-		if(\SMAHTCity\Variable::where('table' => $table_name)->exists())
+		if(\SMAHTCity\Variable::where(['table' => $table_name])->exists())
 		{
 			\Session::flash('flash_warning', 'Variable name already exists, please try again.');
 			return redirect()->back();
@@ -50,13 +50,20 @@ class VariableController extends Controller {
 			// Sanatize and set table name
 			$var->table = $table_name;
 			$var->type = $request->get('type');
-			$var->fields = json_encode($request->get('variables'));
 			// save variable record
 			$var->save();
+
+			//create and save the values
+			foreach($request->get('variables') as $variable)
+			{
+				$var->values()->create(['value' => $variable, 'variable_id' => $var->id]);
+			}
+			
 		//create variable table
 			\Schema::create($table_name, function(Blueprint $table) use ($var, $request)
 			{
 				$table->increments('id');
+				$table->integer('citizen_id');
 				if($var->type == 'boolean')
 					foreach ($request->get('variables') as $variable) {
 						$table->boolean(\SMAHTCity\SMS311::cleanName($variable));
@@ -74,48 +81,13 @@ class VariableController extends Controller {
 			return redirect()->back();
 	}
 
-	/**
-	 * Display the specified resource.
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
-	public function show($id)
+	public function getAttach($question, $variable)
 	{
-		//
-	}
+		$variable = \SMAHTCity\Variable::find($variable);
+		$question = \SMAHTCity\Question::find($question);
+		$question->variables()->attach($variable);
 
-	/**
-	 * Show the form for editing the specified resource.
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
-	public function edit($id)
-	{
-		//
-	}
-
-	/**
-	 * Update the specified resource in storage.
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
-	public function update($id)
-	{
-		//
-	}
-
-	/**
-	 * Remove the specified resource from storage.
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
-	public function destroy($id)
-	{
-		//
+		return '<li class="list-group-item">' . $variable->name . '</li>';
 	}
 
 }

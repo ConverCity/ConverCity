@@ -3,7 +3,7 @@
 @section('content')
     <div class="row">
         <div class="col-sm-offset-2 col-sm-8">
-            <form method="POST" class="form-horizontal" action="{{action('VariableController@store')}}">
+            <form method="POST" class="form-horizontal" action="{{action('VariableController@postStore')}}">
                 <input type="hidden" name="_token" value="{{ csrf_token() }}">
                 
                 <h2>Create New Variable</h2>
