@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="row">
-        <div class="col-md-offset-1 col-md-10">
+        <div class="col-md-offset-1 col-md-5">
             <div class="well">
                 <a class="btn btn-primary pull-right" href="/question/{{$question->parent_id}}">Edit Parent Question</a>
 
@@ -23,8 +23,12 @@
                     </div>
                 </form>
             </div>
-        </div>
+        </div> <!-- / Question Form -->
+        <div class="col-md-6"> <!-- Word Cloud -->
+            <div id="word-cloud"></div>
+        </div> <!-- / Word Cloud -->
     </div>
+    <h3>Possible Answers</h3>
     <div class="row">
         <div class="col-md-offset-1 col-lg-10">
             <div class="row">
@@ -84,8 +88,10 @@
 @section('js-foot')
     @if($question->responses()->count() > 0)
     <script>
+
+    var cloud = document.getElementById('word-cloud');
     var fill = d3.scale.category20();
-      d3.layout.cloud().size([900, 300])
+      d3.layout.cloud().size([300, 300])
           .words({!! \SMAHTCity\SMS311::questionWords($question->id) !!}.map(function(d) {
             return {text: d, size: 10 + Math.random() * 90};
           }))
@@ -96,8 +102,8 @@
           .on("end", draw)
           .start();
       function draw(words) {
-        d3.select("body").append("svg")
-            .attr("width", 900)
+        d3.select("#word-cloud").append("svg")
+            .attr("width", 300)
             .attr("height", 300)
           .append("g")
             .attr("transform", "translate(150,150)")
