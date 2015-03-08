@@ -1,11 +1,11 @@
 ## Convercity
-### A 311 Converstaion Platform
+### An SMS 311 Conversation Platform
 
-### Employed Techology
+### Employed Technology
 
 #### [Larvel PHP Framework](http://laravel.com)
 
-While in the hackathon/prototype mindset we used Laravel to provide a rapid development environmenet where we could rely heavily on it's MVC framework and RESTful controller methodology.
+While in the hackathon/prototype mindset we used Laravel to provide a rapid development environment where we could rely heavily on its MVC framework and RESTful controller methodology.
 
 #### [Twilio](https://www.twilio.com/)
 
@@ -30,27 +30,26 @@ The application is currently hosting on Heroku using a ClearDB SQL Database
 
 ### Existing functionality
 
-#### Natural language interpertation
+#### Natural language interpretation
 
-Convercity can receive natural language text messages, disect the message, and return response or clarifying questions without forcing users into using multiple choice option trees. This logic is contained in our [SMS311 facade.](https://github.com/ConverCity/ConverCity/blob/master/app/SMS311.php) Essentially, the process scores the message one point for each matching word in the message aganist a list of keywords for each potential response. Which even response ends with the highest response is returned to the user.
+Convercity can receive natural language text messages, dissects the message, and return response or clarifying questions without forcing users into using multiple choice option trees. This logic is contained in our [SMS311 facade.](https://github.com/ConverCity/ConverCity/blob/master/app/SMS311.php) Essentially, the process scores the message one point for each matching word in the message against a list of keywords for each potential response. Which even response ends with the highest response is returned to the user.
 
 #### Data Capture
 
-All messages sent into the system are processed from the [SMS Interface](https://github.com/ConverCity/ConverCity/blob/master/app/Http/Controllers/SmsController.php) which will look for a citizen record in the database (based on their phone number) and then begin to log the interaction. If a citizen doesn't reply imediatly, Conversity will remember where the conversation left off and evaluate answers against the last communication before deciding to begin a new communication.
+All messages sent into the system are processed from the [SMS Interface](https://github.com/ConverCity/ConverCity/blob/master/app/Http/Controllers/SmsController.php) which will look for a citizen record in the database (based on their phone number) and then begin to log the interaction. If a citizen doesn't reply immediately, Convercity will remember where the conversation left off and evaluate answers against the last communication before deciding to begin a new communication.
 
-Administrators can create specfic datapoints they are interested in investigating, such as, if domestic abuse victims have access to places where the can find safty.  That datapoint can then be attached to a question and each response to the question can be evalutated for how it should be recorded against the datapoint.
+Administrators can create specific data points they are interested in investigating, such as, if domestic abuse victims have access to places where the can find safety.  That data point can then be attached to a question and each response to the question can be evaluated for how it should be recorded against the data point.
 
-Every communication is stored in its raw form and associated with both the message it was responding to, the message that came after it, and the citizen who sent it. This will allow us to create a data visualization interface that will beable to dig into conversation archives to search for datapoints rather than only viewing data after a datapoint is created.
+Every communication is stored in its raw form and associated with the message it was responding to, the message that came after it, and the citizen who sent it. This will allow us to create a data visualization interface that will be able to dig into conversation archives to search for data points rather than only viewing data after a data point is created.
 
 #### Question Tree 
 
-City Administrators have access to an editing interface where they can create and edit responses, keywords, and datapoints through a point and click interface easily understanding the logic in play at each step of the tree.
+City Administrators have access to an editing interface where they can create and edit responses, keywords, and data points through a point and click interface easily understanding the logic in play at each step of the tree.
 
 ### Future functionality
 
 #### IBM Watson Integration
 
-To better enable accurate routing between questions, we plan to overlay IBM's Watson technolgy on top of the SMS routing facade.  Watson will consume the natural text and route to a specific response based on the keywords of potential replies
+To better enable accurate routing between questions, we plan to overlay IBM's Watson technology on top of the SMS routing facade.  Watson will consume the natural text and route to a specific response based on the keywords of potential replies
 
 #### D3js Visualization
-
