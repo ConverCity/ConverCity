@@ -9,7 +9,7 @@
         @endif
             <div class="well">
                 @if($question->parent_id != null)
-                    <a class="btn btn-primary pull-right" href="/question/{{$question->parent_id}}">Edit Parent Question</a>
+                    <a class="btn btn-primary pull-right" href="/question/{{$question->parent_id}}/edit">Edit Parent Question</a>
                 @endif
                 <h3>Edit Question</h3>
                 <form method="POST" action="/question/{{$question->id}}">
