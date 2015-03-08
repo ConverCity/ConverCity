@@ -52,7 +52,7 @@ class SmsController extends Controller {
         $body = $input['Body'];
 
         if(isset($body)) {
-            if (null != $last_question) {
+            if (isset($last_question)) {
                 $next_question = \SMAHTCity\SMS311::compareToQuestion($body, $last_question);
                 $response->question_id = $last_question->id;
                 $response->save();
