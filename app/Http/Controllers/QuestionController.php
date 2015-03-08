@@ -50,7 +50,7 @@ class QuestionController extends Controller {
         }
         else
         {
-            return redirect('/question/');
+            return redirect('/question-tree/');
         }
 	}
 

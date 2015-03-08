@@ -115,7 +115,7 @@
                 <div class="col-sm-5">
                     <div class="well">
                         <h4>Add Associated Question</h4>
-                            <form method="POST" action="/question/">
+                            <form method="POST" action="{{action('QuestionController@store')}}">
                                 <input type="hidden" name="parent_id" value ="{{$question->id or 'null'}}">
                                 <input type="hidden" name="_token" value="{{ csrf_token() }}">
                                 <div class="form-group">
