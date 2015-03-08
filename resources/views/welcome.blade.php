@@ -53,11 +53,18 @@
 				  background-color: gray;
 				  border-color: #cccccc;
 			}
+			.prize
+			{
+				position: absolute;
+				top: 20px;
+				right: 30px;
+			}
 		</style>
 	</head>
 	<body>
 		<div class="container">
 			<div class="content">
+				<img class="prize" src="/grandprize.png">
 				<img src="/conversitylogo.png">
 				<br>
 				<br>
