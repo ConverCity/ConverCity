@@ -74,7 +74,7 @@ class SmsController extends Controller {
             }
         }
         else
-            $message = 'Hmm ... something went wrong.'
+            $message = 'Hmm ... something went wrong.';
 
     //check if there is a next question
         if($next_question != null)
