@@ -40,7 +40,7 @@ class SmsController extends Controller {
     //Create response instance
         $response = \SMAHTCity\Response::create(array('response' => $input['Body'], 'interaction_id' => $interaction->id));
 
-        if(null != $last_question->question_id)
+        if(isset($last_question->question_id))
         {
             $response->reply_question_id = $last_question->last_question_id;
             $response->save();
@@ -51,7 +51,7 @@ class SmsController extends Controller {
         // Test the body
         $body = $input['Body'];
 
-        if(null != $body) {
+        if(isset($body)) {
             if (null != $last_question) {
                 $next_question = \SMAHTCity\SMS311::compareToQuestion($body, $last_question);
                 $response->question_id = $last_question->id;
@@ -77,7 +77,7 @@ class SmsController extends Controller {
             $message = 'Hmm ... something went wrong.';
 
     //check if there is a next question
-        if($next_question != null)
+        if(isset($next_question))
         {
 
         //check if there associated values

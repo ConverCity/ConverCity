@@ -50,6 +50,8 @@ City Administrators have access to an editing interface where they can create an
 
 #### IBM Watson Integration
 
-To better enable accurate routing between questions, we plan to overlay IBM's Watson technology on top of the SMS routing facade.  Watson will consume the natural text and route to a specific response based on the keywords of potential replies
+To better enable accurate routing between questions, we plan to overlay IBM's Watson technology on top of the SMS routing facade.  Watson will consume the natural text and route to a specific response based on the keywords of potential replies.
 
 #### D3js Visualization
+
+A data visualization section of the application will allow city users to quickly generate pages with topic specifics with D3 generated charts and visualizations.
