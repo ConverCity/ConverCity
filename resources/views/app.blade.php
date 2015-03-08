@@ -32,12 +32,11 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand" href="#">SMAHTCity</a>
+				<a class="navbar-brand" href="#">ConverCity</a>
 			</div>
 
 			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 				<ul class="nav navbar-nav">
-					<li><a href="/question/">Questions</a></li>
 					<li><a href="/question-tree/">Question Tree</a></li>
 					<li><a href="/variable/create">Create Variable</a></li>
 					<li><a href="/sms-interface?method=fake-phone">Fake Phone</a></li>

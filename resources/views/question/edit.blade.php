@@ -11,16 +11,16 @@
                 @if($question->parent_id != null)
                     <a class="btn btn-primary pull-right" href="/question/{{$question->parent_id}}/edit">Edit Parent Question</a>
                 @endif
-                <h3>Edit Question</h3>
+                <h3>Edit Interaction</h3>
                 <form method="POST" action="/question/{{$question->id}}">
                     <input type="hidden" name="_method" value ="PUT">
                     <input type="hidden" name="_token" value="{{ csrf_token() }}">
                     <div class="form-group">
-                        <label for="question">Answer</label>
+                        <label for="question">Incoming</label>
                         <input type="text" value="{{$question->answer}}" class="form-control" name="answer" placeholder="Expected anwser...">
                     </div>
                     <div class="form-group">
-                        <label for="question">Question</label>
+                        <label for="question">Response</label>
                         <input type="text" value="{{$question->question}}" class="form-control" name="question" placeholder="Ask your question...">
                     </div>
                     <div class="form-group">
@@ -69,13 +69,13 @@
     
     <div class="row">
         <div class="col-md-offset-1 col-lg-10">
-        <h3>Possible Answers</h3>
+        <h3>Possible Replies</h3>
             <div class="row">
                 @foreach($children as $quest)
                     <div class="col-sm-5">
                         <div class="well">
-                        <p><strong>Answer: </strong>{{$quest->answer}}</p>
-                        <p><strong>Question:</strong> {{$quest->question}}</p>
+                        <p><strong>Incoming: </strong>{{$quest->answer}}</p>
+                        <p><strong>Response:</strong> {{$quest->question}}</p>
                         <p><strong>Keywords:</strong>
                         {{$quest->keywords}}</p>
                             @if($question->variables()->count() > 0)
