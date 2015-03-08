@@ -40,7 +40,7 @@ class SmsController extends Controller {
     //Create response instance
         $response = \SMAHTCity\Response::create(array('response' => $input['Body'], 'interaction_id' => $interaction->id));
 
-        if(isset($last_question->question_id))
+        if(null != $last_question->question_id)
         {
             $response->reply_question_id = $last_question->last_question_id;
             $response->save();
@@ -50,8 +50,9 @@ class SmsController extends Controller {
 
         // Test the body
         $body = $input['Body'];
-        if(isset($body)) {
-            if (isset($last_question)) {
+
+        if(null != $body) {
+            if (null != $last_question) {
                 $next_question = \SMAHTCity\SMS311::compareToQuestion($body, $last_question);
                 $response->question_id = $last_question->id;
                 $response->save();
@@ -60,20 +61,23 @@ class SmsController extends Controller {
             }
 
             if($next_question == null) {
-                $message = 'I\'m sorry, I don\'t think I understand your question';
+                $message = 'I\'m sorry, I don\'t think I understand.';
                 $interaction->last_question_id = $interaction->last_question_id;
             }
             else {
                 // Extract the question from the next question
                 $interaction->last_question_id = $next_question->id;
+                $response->reply_question_id = $next_question->id;
                 $message = $next_question->question;
                 $interaction->save();
 
             }
         }
+        else
+            $message = 'Hmm ... something went wrong.'
 
     //check if there is a next question
-        if($next_question !== null)
+        if($next_question != null)
         {
 
         //check if there associated values
@@ -115,7 +119,7 @@ class SmsController extends Controller {
 			elseif( $client->account->messages->create(array(
 					'To' => $to,
 					'From' => "+16175453311",
-					'Body' => $next_question->question,
+					'Body' => $message
 				)))
 				{
 					// Log message
