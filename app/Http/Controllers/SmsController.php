@@ -83,7 +83,9 @@ class SmsController extends Controller {
             //log values
                 foreach(\SMAHTCity\Value::where('question_id', $next_question->id)->get() as $value)
                 {
-                    
+                    $field = $value->field;
+                    if($field->type == 'boolean')
+                        \DB::table($field->variable->table)->insert([$field->field_name => true]);
                 }
             }
 

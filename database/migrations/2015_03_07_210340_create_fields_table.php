@@ -17,6 +17,7 @@ class CreateFieldsTable extends Migration {
 			$table->increments('id');
 			$table->integer('variable_id');
 			$table->string('name');
+			$table->string('field_name');
 			$table->string('type');
 			$table->timestamps();
 		});

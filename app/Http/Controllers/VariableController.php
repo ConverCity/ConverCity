@@ -56,7 +56,7 @@ class VariableController extends Controller {
 			//create and save the values
 			foreach($request->get('variables') as $variable)
 			{
-				$var->fields()->create(['name' => $variable, 'type' => $var->type]);
+				$var->fields()->create(['name' => $variable, 'type' => $var->type, 'field_name' => \SMAHTCity\SMS311::cleanName($variable)]);
 			}
 			
 		//create variable table

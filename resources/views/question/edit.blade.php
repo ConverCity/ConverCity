@@ -83,7 +83,7 @@
                             @forelse(\SMAHTCity\Value::where('question_id', $quest->id)->get() as $value)
                             {{$value->field->name}}: <i>true</i><br>
                             @empty
-                            <i>None</i>
+                            <i>None</i><br>
                             @endforelse
 
                             <strong>Associate a Values</strong><br>
@@ -95,7 +95,7 @@
                                             <option value="{{$field->id}}">{{$field->name}}</option>
                                         @endforeach
                                     </select>
-                                    <button class="btn btn-xs" onclick="saveVarVal({{$qv->id}}, {{$quest->id}}); return false;">Save</button><br>
+                                    <button class="btn btn-xs" id="btn-v-{{$qv->id}}-q-{{$quest->id}}" onclick="saveVarVal({{$qv->id}}, {{$quest->id}}); return false;">Save</button><br>
                                 @endforeach
                             @endif
                             <hr>
@@ -118,6 +118,10 @@
                             <form method="POST" action="/question/">
                                 <input type="hidden" name="parent_id" value ="{{$question->id or 'null'}}">
                                 <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                                <div class="form-group">
+                                    <label for="question">Answer</label>
+                                    <input type="text" value="" class="form-control" name="answer" placeholder="Expected answer...">
+                                </div>
                                 <div class="form-group">
                                     <label for="question">Question</label>
                                     <input type="text" value="" class="form-control" name="question" placeholder="Ask your question...">
@@ -206,13 +210,17 @@
         var calledId = 'v-' + varID + '-q-' + quesID;
         var fieldID = document.getElementById(calledId).value;
         var url = '/variable/attach-value/' + varID + '/' + quesID + '/' + fieldID;  
+        var btnID = '#btn-v-' + varID + '-q-' + quesID;
         var content = {"_token": "{{ csrf_token() }}"};
 
         $.ajax({
             url: url,
             type: "POST",
             data: content
-        })
+        }).done(function(){
+            $( btnID ).addClass('btn-success');
+        });
+
 
     }
     </script>

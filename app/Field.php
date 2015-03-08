@@ -4,7 +4,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Field extends Model {
 
-	protected $fillable = ['variable_id', 'name', 'type'];
+	protected $fillable = ['variable_id', 'name', 'type', 'field_name'];
 
 	public function variable()
 	{
