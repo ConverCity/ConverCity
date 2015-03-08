@@ -44,7 +44,7 @@ class QuestionController extends Controller {
 
         $q->save();
 
-        if(isset($request->get('parent_id')))
+        if(null != $request->get('parent_id'))
         {
             return redirect()->back();
         }
