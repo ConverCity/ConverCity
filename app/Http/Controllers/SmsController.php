@@ -62,7 +62,7 @@ class SmsController extends Controller {
 
             if($next_question == null) {
                 $message = 'I\'m sorry, I don\'t think I understand.';
-                $interaction->last_question_id = $interaction->last_question_id;
+                $interaction= \SMAHTCity\Interaction::create(array('citizen_id' => $citizen->id));
             }
             else {
                 // Extract the question from the next question
