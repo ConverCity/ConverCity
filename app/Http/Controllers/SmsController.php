@@ -29,19 +29,29 @@ class SmsController extends Controller {
         }
 
     //Load the interaction instance
-        $interaction = \SMAHTCity\Interaction::firstOrCreate(array('citizen_id' => $citizen->id));
+        if(\SMAHTCity\Interaction::where('citizen_id', $citizen->id)->where('last_question_id', '!=', 0)->exists())
+            {$interaction = \SMAHTCity\Interaction::where('citizen_id', $citizen->id)->where('last_question_id', '!=', 0)->orderBy('updated_at', 'desc')->first();}
+        elseif(\SMAHTCity\Interaction::where('citizen_id', $citizen->id)->exists())
+            {$interaction = \SMAHTCity\Interaction::where('citizen_id', $citizen->id)->orderBy('updated_at', 'desc')->first();}
 
+    if(isset($interaction))
+    {
     //Test if interaction is from the last hour
         $date = $interaction->updated_at;
+        if($date->addMinutes(60)->isPast())
+        {
+            $interaction = \SMAHTCity\Interaction::create(array('citizen_id' => $citizen->id));
+        }
 
     //If not the interaction load the last question
         if($interaction->lastQuestion != null)
         {
             $last_question = $interaction->lastQuestion;
         }
+    }
 
     //Create response instance
-        $response = \SMAHTCity\Response::create(array('response' => $input['Body'], 'interaction_id' => $interaction->id));
+        $response = \SMAHTCity\Response::create(array('response' => $input['Body']));
 
         if(isset($last_question->question_id))
         {
@@ -65,11 +75,17 @@ class SmsController extends Controller {
 
             if($next_question == null) {
                 $message = 'I\'m sorry, I don\'t think I understand.';
-                $interaction= \SMAHTCity\Interaction::create(array('citizen_id' => $citizen->id));
             }
             else {
                 // Extract the question from the next question
-                $interaction->last_question_id = $next_question->id;
+                if(isset($interaction))
+                {
+                   $interaction->last_question_id =  $next_question->id;
+                }
+                else
+                {
+                   $interaction = \SMAHTCity\Interaction::create(array('citizen_id' => $citizen->id, 'last_question_id' => $next_question->id));
+                }
                 $response->reply_question_id = $next_question->id;
                 $message = $next_question->question;
                 $interaction->save();
@@ -78,6 +94,10 @@ class SmsController extends Controller {
         }
         else
             $message = 'Hmm ... something went wrong.';
+
+    //save interaction id to response
+    $response->interaction_id = $interaction->id;
+    $response->save();
 
     //check if there is a next question
         if(isset($next_question))
