@@ -20,7 +20,7 @@ class MakeQuestionsTables extends Migration {
 			$table->text('keywords');
 			$table->text('options');
             $table->integer('topic_id');
-            $table->integer('parent_id');
+            $table->integer('parent_id')->nullable();
             $table->boolean('is_topic')->default(0);
 			$table->timestamps();
 		});

@@ -41,7 +41,8 @@ class QuestionController extends Controller {
         $q->keywords = $request->get('keywords');
         if($parent_id = $request->get('parent_id'))
         {$q->parent_id = $parent_id;}
-
+    	if($request->get('is_topic'))
+        $q->is_topic = true;
         $q->save();
 
         if(null != $request->get('parent_id'))
@@ -109,9 +110,8 @@ class QuestionController extends Controller {
 	 */
 	public function destroy($id)
 	{
-		$q = \SMAHTCity\Question::find($id);
-        $q->delete();
-
+		\SMAHTCity\Question::find($id)->delete();
+		
         return redirect()->back();
 	}
 

@@ -4,22 +4,27 @@
 
     <div class="row">
         <div class="col-md-offset-1 col-lg-10">
+            <h1>Question Tree</h1>
+                </br>
+            <a class="btn btn-primary btn-sm" href="/question/create">Add New Topic</a>
+            <br>
+            <br>
             <ul>
-                <h1>Question Tree</h1>
+
             @foreach($topics as $topic)
-                    <li><a href="/question/{{$topic->id}}/edit">Edit</a> - {{$topic->answer}}</li>
+                    <li class="" id="topic-{{$topic->id}}"><a href="/question/{{$topic->id}}/edit">{{$topic->answer}}</a>   <button class="btn btn-danger btn-xs" onclick="deleteTopic({{$topic->id}})">Delete</button></li>
                 @if($topic->children)
-                    <ul>
+                    <ul >
                         @foreach($topic->children as $c1)
-                        <li><a href="/question/{{$c1->id}}/edit">Edit</a> - {{$c1->answer}}</li>
+                        <li><a href="/question/{{$c1->id}}/edit">{{$c1->answer}}</a></li>
                             @if($c1->children)
                                 <ul>
                                     @foreach($c1->children as $c2)
-                                        <li><a href="/question/{{$c2->id}}/edit">Edit</a> - {{$c2->answer}}</li>
+                                        <li><a href="/question/{{$c2->id}}/edit">{{$c2->answer}}</a></li>
                                         @if($c2->children)
                                             <ul>
                                                 @foreach($c2->children as $c3)
-                                                    <li><a href="/question/{{$c3->id}}/edit">Edit</a> - {{$c3->answer}}</li>
+                                                    <li><a href="/question/{{$c3->id}}/edit">{{$c3->answer}}</a></li>
                                                 @endforeach
                                             </ul>
                                         @endif
@@ -30,8 +35,28 @@
                     </ul>
                 @endif
             @endforeach
+
             </ul>
         </div>
     </div>
+
+@stop
+
+@section('js-foot')
+<script >
+    function deleteTopic(id)
+    {
+        var url = /question/ + id;
+        var topicID = '#topic-' + id;
+        $( topicID ).addClass('fade');
+        $.ajax({
+            url: url,
+            type: "POST",
+            data: {'_method': 'DELETE', '_token': "{{ csrf_token() }}"}
+        }).done(function(){
+            $( topicID ).addClass('hidden');
+        });
+    }
+</script>
 
 @stop
