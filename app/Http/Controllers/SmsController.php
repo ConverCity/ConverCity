@@ -31,6 +31,9 @@ class SmsController extends Controller {
     //Load the interaction instance
         $interaction = \SMAHTCity\Interaction::firstOrCreate(array('citizen_id' => $citizen->id));
 
+    //Test if interaction is from the last hour
+        $date = $interaction->updated_at;
+
     //If not the interaction load the last question
         if($interaction->lastQuestion != null)
         {
