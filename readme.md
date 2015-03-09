@@ -1,7 +1,7 @@
 ## Convercity
 ### An SMS 311 Conversation Platform
 
-View example deployment at [https://mysterious-tor-1649.herokuapp.com/]
+View example deployment at https://mysterious-tor-1649.herokuapp.com/
 
 ### Employed Technology
 
