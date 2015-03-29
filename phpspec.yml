@@ -1,0 +1,5 @@
+suites:
+    main:
+        namespace: convercity
+        psr4_prefix: convercity
+        src_path: app

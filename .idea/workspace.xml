@@ -1,0 +1,1362 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="8f465a8a-52fb-4b6e-8ee7-d8a1fb07ed55" name="Default" comment="" />
+    <ignored path="Convercity.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <ignored path=".idea/dataSources.local.xml" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="ComposerSettings">
+    <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
+    <pharPath>$USER_HOME$/composer.phar</pharPath>
+    <phpPath>php</phpPath>
+  </component>
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="DatabaseView">
+    <option name="FLATTEN" value="false" />
+    <option name="GROUP_BY_TYPE" value="true" />
+    <option name="SORT_CHILDREN" value="false" />
+    <option name="SHOW_TABLE_CONSTRAINTS" value="true" />
+    <PATH>
+      <PATH_ELEMENT>
+        <option name="myItemId" />
+        <option name="myItemType" value="com.intellij.database.view.DbRootNodeDescriptor" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="PostgreSQL - convercity@localhost" />
+        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="convercity.public" />
+        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
+      </PATH_ELEMENT>
+    </PATH>
+    <PATH>
+      <PATH_ELEMENT>
+        <option name="myItemId" />
+        <option name="myItemType" value="com.intellij.database.view.DbRootNodeDescriptor" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="PostgreSQL - convercity@localhost" />
+        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
+      </PATH_ELEMENT>
+    </PATH>
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="Convercity" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="dashboard.blade.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/resources/views/app/dashboard.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="0" column="22" selection-start-line="0" selection-start-column="22" selection-end-line="0" selection-end-column="22" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/database/migrations/2015_03_27_023005_create_messages_table.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2015_03_27_023012_create_replies_table.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2015_03_27_023939_create_keywords_table.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2015_03_27_023025_create_citizens_table.php" />
+        <option value="$PROJECT_DIR$/config/database.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2015_03_27_024108_create_message_reply_piviot_table.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2015_03_27_024135_create_keyword_reply_piviot_table.php" />
+        <option value="$PROJECT_DIR$/.env" />
+        <option value="$PROJECT_DIR$/database/migrations/2015_03_29_124921_create_incomings_table.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2015_03_29_125705_create_sms_logs_table.php" />
+        <option value="$PROJECT_DIR$/composer.json" />
+        <option value="$PROJECT_DIR$/public/css/dashboard.css" />
+        <option value="$PROJECT_DIR$/resources/views/app.blade.php" />
+        <option value="$PROJECT_DIR$/public/css/cover.css" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/FrontEndController.php" />
+        <option value="$PROJECT_DIR$/resources/views/cover.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/layouts/login.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/auth/login.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/auth/register.blade.php" />
+        <option value="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" />
+        <option value="$PROJECT_DIR$/app/User.php" />
+        <option value="$PROJECT_DIR$/app/Services/Registrar.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" />
+        <option value="$PROJECT_DIR$/database/seeds/UserTableSeeder.php" />
+        <option value="$PROJECT_DIR$/resources/views/auth/password.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/auth/reset.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Middleware/RedirectIfAuthenticated.php" />
+        <option value="$PROJECT_DIR$/app/Http/routes.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/AppPagesController.php" />
+        <option value="$PROJECT_DIR$/resources/views/app/dashboard.blade.php" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <gulpfiles>
+      <GulpfileState>
+        <gulpfile-path>$PROJECT_DIR$/gulpfile.js</gulpfile-path>
+      </GulpfileState>
+    </gulpfiles>
+  </component>
+  <component name="NamedScopeManager">
+    <order />
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true">
+    <include_path>
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-file-iterator" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-timer" />
+      <path value="$PROJECT_DIR$/vendor/nikic/php-parser" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-text-template" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-token-stream" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/phpunit-mock-objects" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-code-coverage" />
+      <path value="$PROJECT_DIR$/vendor/nesbot/carbon" />
+      <path value="$PROJECT_DIR$/vendor/symfony/console" />
+      <path value="$PROJECT_DIR$/vendor/symfony/process" />
+      <path value="$PROJECT_DIR$/vendor/symfony/debug" />
+      <path value="$PROJECT_DIR$/vendor/symfony/var-dumper" />
+      <path value="$PROJECT_DIR$/vendor/symfony/http-kernel" />
+      <path value="$PROJECT_DIR$/vendor/symfony/filesystem" />
+      <path value="$PROJECT_DIR$/vendor/symfony/finder" />
+      <path value="$PROJECT_DIR$/vendor/symfony/routing" />
+      <path value="$PROJECT_DIR$/vendor/symfony/security-core" />
+      <path value="$PROJECT_DIR$/vendor/symfony/event-dispatcher" />
+      <path value="$PROJECT_DIR$/vendor/symfony/translation" />
+      <path value="$PROJECT_DIR$/vendor/symfony/http-foundation" />
+      <path value="$PROJECT_DIR$/vendor/symfony/yaml" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/instantiator" />
+      <path value="$PROJECT_DIR$/vendor/vlucas/phpdotenv" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/inflector" />
+      <path value="$PROJECT_DIR$/vendor/ircmaxell/password-compat" />
+      <path value="$PROJECT_DIR$/vendor/psr/log" />
+      <path value="$PROJECT_DIR$/vendor/mtdowling/cron-expression" />
+      <path value="$PROJECT_DIR$/vendor/classpreloader/classpreloader" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/phpunit" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/global-state" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/comparator" />
+      <path value="$PROJECT_DIR$/vendor/phpspec/phpspec" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/environment" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/exporter" />
+      <path value="$PROJECT_DIR$/vendor/psy/psysh" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/recursion-context" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/diff" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/version" />
+      <path value="$PROJECT_DIR$/vendor/jeremeamia/SuperClosure" />
+      <path value="$PROJECT_DIR$/vendor/dnoegel/php-xdg-base-dir" />
+      <path value="$PROJECT_DIR$/vendor/symfony/class-loader" />
+      <path value="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer" />
+      <path value="$PROJECT_DIR$/vendor/barryvdh/laravel-ide-helper" />
+      <path value="$PROJECT_DIR$/vendor/danielstjules/stringy" />
+      <path value="$PROJECT_DIR$/vendor/jakub-onderka/php-console-highlighter" />
+      <path value="$PROJECT_DIR$/vendor/monolog/monolog" />
+      <path value="$PROJECT_DIR$/vendor/jakub-onderka/php-console-color" />
+      <path value="$PROJECT_DIR$/vendor/phpdocumentor/reflection-docblock" />
+      <path value="$PROJECT_DIR$/vendor/laravel/framework" />
+      <path value="$PROJECT_DIR$/vendor/composer" />
+      <path value="$PROJECT_DIR$/vendor/league/flysystem" />
+      <path value="$PROJECT_DIR$/vendor/phpspec/php-diff" />
+      <path value="$PROJECT_DIR$/vendor/phpspec/prophecy" />
+    </include_path>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="y" value="23" />
+    <option name="width" value="1277" />
+    <option name="height" value="752" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Convercity" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Convercity" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Convercity" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Convercity" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Convercity" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="storage" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Convercity" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Convercity" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="storage" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="framework" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Convercity" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Convercity" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="storage" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="framework" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Convercity" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Convercity" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="storage" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Convercity" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Convercity" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Convercity" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Convercity" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="layouts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Convercity" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Convercity" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Convercity" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Convercity" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Convercity" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Convercity" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Convercity" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Convercity" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Http" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Convercity" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Convercity" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Http" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Middleware" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Convercity" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Convercity" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Http" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Controllers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scratches" />
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="FullScreen" value="false" />
+    <property name="last_opened_file_path" value="/Applications/MAMP/htdocs/new-directions-portal" />
+    <property name="dynamic.classpath" value="false" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/resources/views" />
+      <recent name="$PROJECT_DIR$/resources/views/layouts" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
+      <TestRunner />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpBehatConfigurationType" factoryName="Behat">
+      <BehatRunner />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpLocalRunConfigurationType" factoryName="PHP Console">
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server">
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <pass-parent-envs>true</pass-parent-envs>
+      <envs />
+      <method />
+    </configuration>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="8f465a8a-52fb-4b6e-8ee7-d8a1fb07ed55" name="Default" comment="" />
+      <created>1427419805756</created>
+      <option name="number" value="Default" />
+      <updated>1427419805756</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="23" width="1277" height="752" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32876712" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20647773" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3435843" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+      <collection />
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/config/database.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="28" column="23" selection-start-line="28" selection-start-column="23" selection-end-line="28" selection-end-column="23" />
+          <folding>
+            <marker date="1427492188000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1427492188000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1427492188000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1427492188000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1427492188000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1427492188000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1427492188000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1427492188000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1427492188000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1427492188000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1427492188000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1427492188000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1427492188000" expanded="true" signature="-1:-1" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.env">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="14" column="21" selection-start-line="14" selection-start-column="21" selection-end-line="14" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.env">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="4" column="17" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="13" column="40" selection-start-line="13" selection-start-column="40" selection-end-line="13" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/FrontEndController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="16" column="27" selection-start-line="16" selection-start-column="27" selection-end-line="16" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2015_03_27_023005_create_messages_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3606789">
+          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2015_03_27_023012_create_replies_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33946252">
+          <caret line="17" column="36" selection-start-line="17" selection-start-column="36" selection-end-line="17" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2015_03_27_023939_create_keywords_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33946252">
+          <caret line="17" column="38" selection-start-line="17" selection-start-column="38" selection-end-line="17" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2015_03_27_023025_create_citizens_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3182461">
+          <caret line="16" column="48" selection-start-line="16" selection-start-column="48" selection-end-line="16" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2015_03_27_024108_create_message_reply_piviot_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.38297874">
+          <caret line="19" column="34" selection-start-line="19" selection-start-column="34" selection-end-line="19" selection-end-column="34" />
+          <folding>
+            <marker date="1427632389000" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1427632389000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1427632389000" expanded="true" signature="-1:-1" placeholder=" Run the migrations. ..." />
+            <marker date="1427632389000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427632389000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1427632389000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427632389000" expanded="true" signature="-1:-1" placeholder=" Reverse the migrations. ..." />
+            <marker date="1427632389000" expanded="true" signature="-1:-1" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2015_03_27_024135_create_keyword_reply_piviot_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.38297874">
+          <caret line="19" column="70" selection-start-line="19" selection-start-column="70" selection-end-line="19" selection-end-column="70" />
+          <folding>
+            <marker date="1427632675000" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1427632675000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1427632675000" expanded="true" signature="-1:-1" placeholder=" Run the migrations. ..." />
+            <marker date="1427632675000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427632675000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1427632675000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427632675000" expanded="true" signature="-1:-1" placeholder=" Reverse the migrations. ..." />
+            <marker date="1427632675000" expanded="true" signature="-1:-1" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://DATABASE/ff17d9aa-9871-4ce9-9ed6-789d9d05b139">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>DATABASE</ID>
+          <OriginalElement>ff17d9aa-9871-4ce9-9ed6-789d9d05b139</OriginalElement>
+          <nodes>
+            <node x="" y="">ff17d9aa-9871-4ce9-9ed6-789d9d05b139.table:convercity.pg_catalog.pg_stat_database</node>
+            <node x="" y="">ff17d9aa-9871-4ce9-9ed6-789d9d05b139.table:convercity.pg_catalog.pg_statio_all_tables</node>
+            <node x="" y="">ff17d9aa-9871-4ce9-9ed6-789d9d05b139.table:convercity.pg_catalog.pg_database</node>
+            <node x="" y="">ff17d9aa-9871-4ce9-9ed6-789d9d05b139.table:convercity.pg_catalog.pg_group</node>
+            <node x="" y="">ff17d9aa-9871-4ce9-9ed6-789d9d05b139.table:convercity.pg_catalog.pg_user_mappings</node>
+            <node x="" y="">ff17d9aa-9871-4ce9-9ed6-789d9d05b139.table:convercity.pg_catalog.pg_stat_all_indexes</node>
+            <node x="" y="">ff17d9aa-9871-4ce9-9ed6-789d9d05b139.table:convercity.pg_catalog.pg_ts_dict</node>
+            <node x="" y="">ff17d9aa-9871-4ce9-9ed6-789d9d05b139.table:convercity.pg_catalog.pg_stat_all_tables</node>
+            <node x="" y="">ff17d9aa-9871-4ce9-9ed6-789d9d05b139.table:convercity.pg_catalog.pg_default_acl</node>
+            <node x="" y="">ff17d9aa-9871-4ce9-9ed6-789d9d05b139.table:convercity.pg_catalog.pg_amproc</node>
+            <node x="" y="">ff17d9aa-9871-4ce9-9ed6-789d9d05b139.table:convercity.pg_catalog.pg_description</node>
+            <node x="" y="">ff17d9aa-9871-4ce9-9ed6-789d9d05b139.table:convercity.pg_catalog.pg_locks</node>
+            <node x="" y="">ff17d9aa-9871-4ce9-9ed6-789d9d05b139.table:convercity.pg_catalog.pg_prepared_statements</node>
+            <node x="" y="">ff17d9aa-9871-4ce9-9ed6-789d9d05b139.table:convercity.pg_catalog.pg_views</node>
+            <node x="" y="">ff17d9aa-9871-4ce9-9ed6-789d9d05b139.table:convercity.pg_catalog.pg_statio_sys_indexes</node>
+            <node x="" y="">ff17d9aa-9871-4ce9-9ed6-789d9d05b139.table:convercity.pg_catalog.pg_stat_activity</node>
+            <node x="" y="">ff17d9aa-9871-4ce9-9ed6-789d9d05b139.table:convercity.pg_catalog.pg_attrdef</node>
+            <node x="" y="">ff17d9aa-9871-4ce9-9ed6-789d9d05b139.table:convercity.pg_catalog.pg_user</node>
+            <node x="" y="">ff17d9aa-9871-4ce9-9ed6-789d9d05b139.table:convercity.pg_catalog.pg_shdepend</node>
+            <node x="" y="">ff17d9aa-9871-4ce9-9ed6-789d9d05b139.table:convercity.pg_catalog.pg_opclass</node>
+            <node x="" y="">ff17d9aa-9871-4ce9-9ed6-789d9d05b139.table:convercity.pg_catalog.pg_attribute</node>
+            <node x="" y="">ff17d9aa-9871-4ce9-9ed6-789d9d05b139.table:convercity.pg_catalog.pg_available_extension_versions</node>
+            <node x="" y="">ff17d9aa-9871-4ce9-9ed6-789d9d05b139.table:convercity.pg_catalog.pg_foreign_server</node>
+            <node x="" y="">ff17d9aa-9871-4ce9-9ed6-789d9d05b139.table:convercity.pg_catalog.pg_stat_user_functions</node>
+            <node x="" y="">ff17d9aa-9871-4ce9-9ed6-789d9d05b139.table:convercity.pg_catalog.pg_range</node>
+            <node x="" y="">ff17d9aa-9871-4ce9-9ed6-789d9d05b139.table:convercity.pg_catalog.pg_proc</node>
+            <node x="" y="">ff17d9aa-9871-4ce9-9ed6-789d9d05b139.table:convercity.pg_catalog.pg_ts_config</node>
+            <node x="" y="">ff17d9aa-9871-4ce9-9ed6-789d9d05b139.table:convercity.pg_catalog.pg_timezone_abbrevs</node>
+            <node x="" y="">ff17d9aa-9871-4ce9-9ed6-789d9d05b139.table:convercity.pg_catalog.pg_statio_user_tables</node>
+            <node x="" y="">ff17d9aa-9871-4ce9-9ed6-789d9d05b139.table:convercity.pg_catalog.pg_conversion</node>
+            <node x="" y="">ff17d9aa-9871-4ce9-9ed6-789d9d05b139.table:convercity.pg_catalog.pg_db_role_setting</node>
+            <node x="" y="">ff17d9aa-9871-4ce9-9ed6-789d9d05b139.table:convercity.pg_catalog.pg_replication_slots</node>
+            <node x="" y="">ff17d9aa-9871-4ce9-9ed6-789d9d05b139.table:convercity.pg_catalog.pg_settings</node>
+            <node x="" y="">ff17d9aa-9871-4ce9-9ed6-789d9d05b139.table:convercity.pg_catalog.pg_stat_user_indexes</node>
+            <node x="" y="">ff17d9aa-9871-4ce9-9ed6-789d9d05b139.table:convercity.pg_catalog.pg_shadow</node>
+            <node x="" y="">ff17d9aa-9871-4ce9-9ed6-789d9d05b139.table:convercity.pg_catalog.pg_class</node>
+            <node x="" y="">ff17d9aa-9871-4ce9-9ed6-789d9d05b139.table:convercity.pg_catalog.pg_cast</node>
+            <node x="" y="">ff17d9aa-9871-4ce9-9ed6-789d9d05b139.table:convercity.pg_catalog.pg_index</node>
+            <node x="" y="">ff17d9aa-9871-4ce9-9ed6-789d9d05b139.table:convercity.pg_catalog.pg_stat_xact_all_tables</node>
+            <node x="" y="">ff17d9aa-9871-4ce9-9ed6-789d9d05b139.table:convercity.pg_catalog.pg_event_trigger</node>
+            <node x="" y="">ff17d9aa-9871-4ce9-9ed6-789d9d05b139.table:convercity.pg_catalog.pg_available_extensions</node>
+            <node x="" y="">ff17d9aa-9871-4ce9-9ed6-789d9d05b139.table:convercity.pg_catalog.pg_operator</node>
+            <node x="" y="">ff17d9aa-9871-4ce9-9ed6-789d9d05b139.table:convercity.pg_catalog.pg_stat_user_tables</node>
+            <node x="" y="">ff17d9aa-9871-4ce9-9ed6-789d9d05b139.table:convercity.pg_catalog.pg_statio_all_sequences</node>
+            <node x="" y="">ff17d9aa-9871-4ce9-9ed6-789d9d05b139.table:convercity.pg_catalog.pg_extension</node>
+            <node x="" y="">ff17d9aa-9871-4ce9-9ed6-789d9d05b139.table:convercity.pg_catalog.pg_prepared_xacts</node>
+            <node x="" y="">ff17d9aa-9871-4ce9-9ed6-789d9d05b139.table:convercity.pg_catalog.pg_foreign_table</node>
+            <node x="" y="">ff17d9aa-9871-4ce9-9ed6-789d9d05b139.table:convercity.pg_catalog.pg_ts_template</node>
+            <node x="" y="">ff17d9aa-9871-4ce9-9ed6-789d9d05b139.table:convercity.pg_catalog.pg_stat_xact_sys_tables</node>
+            <node x="" y="">ff17d9aa-9871-4ce9-9ed6-789d9d05b139.table:convercity.pg_catalog.pg_stat_xact_user_tables</node>
+            <node x="" y="">ff17d9aa-9871-4ce9-9ed6-789d9d05b139.table:convercity.pg_catalog.pg_stat_archiver</node>
+            <node x="" y="">ff17d9aa-9871-4ce9-9ed6-789d9d05b139.table:convercity.pg_catalog.pg_am</node>
+            <node x="" y="">ff17d9aa-9871-4ce9-9ed6-789d9d05b139.table:convercity.pg_catalog.pg_auth_members</node>
+            <node x="" y="">ff17d9aa-9871-4ce9-9ed6-789d9d05b139.table:convercity.pg_catalog.pg_largeobject</node>
+            <node x="" y="">ff17d9aa-9871-4ce9-9ed6-789d9d05b139.table:convercity.pg_catalog.pg_trigger</node>
+            <node x="" y="">ff17d9aa-9871-4ce9-9ed6-789d9d05b139.table:convercity.pg_catalog.pg_amop</node>
+            <node x="" y="">ff17d9aa-9871-4ce9-9ed6-789d9d05b139.table:convercity.pg_catalog.pg_inherits</node>
+            <node x="" y="">ff17d9aa-9871-4ce9-9ed6-789d9d05b139.table:convercity.pg_catalog.pg_matviews</node>
+            <node x="" y="">ff17d9aa-9871-4ce9-9ed6-789d9d05b139.table:convercity.pg_catalog.pg_statistic</node>
+            <node x="" y="">ff17d9aa-9871-4ce9-9ed6-789d9d05b139.table:convercity.pg_catalog.pg_tablespace</node>
+            <node x="" y="">ff17d9aa-9871-4ce9-9ed6-789d9d05b139.table:convercity.pg_catalog.pg_largeobject_metadata</node>
+            <node x="" y="">ff17d9aa-9871-4ce9-9ed6-789d9d05b139.table:convercity.pg_catalog.pg_collation</node>
+            <node x="" y="">ff17d9aa-9871-4ce9-9ed6-789d9d05b139.table:convercity.pg_catalog.pg_enum</node>
+            <node x="" y="">ff17d9aa-9871-4ce9-9ed6-789d9d05b139.table:convercity.pg_catalog.pg_statio_sys_tables</node>
+            <node x="" y="">ff17d9aa-9871-4ce9-9ed6-789d9d05b139.table:convercity.pg_catalog.pg_shdescription</node>
+            <node x="" y="">ff17d9aa-9871-4ce9-9ed6-789d9d05b139.table:convercity.pg_catalog.pg_user_mapping</node>
+            <node x="" y="">ff17d9aa-9871-4ce9-9ed6-789d9d05b139.table:convercity.pg_catalog.pg_roles</node>
+            <node x="" y="">ff17d9aa-9871-4ce9-9ed6-789d9d05b139.table:convercity.pg_catalog.pg_indexes</node>
+            <node x="" y="">ff17d9aa-9871-4ce9-9ed6-789d9d05b139.table:convercity.pg_catalog.pg_rewrite</node>
+            <node x="" y="">ff17d9aa-9871-4ce9-9ed6-789d9d05b139.table:convercity.pg_catalog.pg_type</node>
+            <node x="" y="">ff17d9aa-9871-4ce9-9ed6-789d9d05b139.table:convercity.pg_catalog.pg_foreign_data_wrapper</node>
+            <node x="" y="">ff17d9aa-9871-4ce9-9ed6-789d9d05b139.table:convercity.pg_catalog.pg_statio_sys_sequences</node>
+            <node x="" y="">ff17d9aa-9871-4ce9-9ed6-789d9d05b139.table:convercity.pg_catalog.pg_stat_sys_indexes</node>
+            <node x="" y="">ff17d9aa-9871-4ce9-9ed6-789d9d05b139.table:convercity.pg_catalog.pg_stat_sys_tables</node>
+            <node x="" y="">ff17d9aa-9871-4ce9-9ed6-789d9d05b139.table:convercity.pg_catalog.pg_stats</node>
+            <node x="" y="">ff17d9aa-9871-4ce9-9ed6-789d9d05b139.table:convercity.pg_catalog.pg_opfamily</node>
+            <node x="" y="">ff17d9aa-9871-4ce9-9ed6-789d9d05b139.table:convercity.pg_catalog.pg_stat_xact_user_functions</node>
+            <node x="" y="">ff17d9aa-9871-4ce9-9ed6-789d9d05b139.table:convercity.pg_catalog.pg_depend</node>
+            <node x="" y="">ff17d9aa-9871-4ce9-9ed6-789d9d05b139.table:convercity.pg_catalog.pg_timezone_names</node>
+            <node x="" y="">ff17d9aa-9871-4ce9-9ed6-789d9d05b139.table:convercity.pg_catalog.pg_stat_bgwriter</node>
+            <node x="" y="">ff17d9aa-9871-4ce9-9ed6-789d9d05b139.table:convercity.pg_catalog.pg_authid</node>
+            <node x="" y="">ff17d9aa-9871-4ce9-9ed6-789d9d05b139.table:convercity.pg_catalog.pg_seclabels</node>
+            <node x="" y="">ff17d9aa-9871-4ce9-9ed6-789d9d05b139.table:convercity.pg_catalog.pg_language</node>
+            <node x="" y="">ff17d9aa-9871-4ce9-9ed6-789d9d05b139.table:convercity.pg_catalog.pg_namespace</node>
+            <node x="" y="">ff17d9aa-9871-4ce9-9ed6-789d9d05b139.table:convercity.pg_catalog.pg_statio_user_indexes</node>
+            <node x="" y="">ff17d9aa-9871-4ce9-9ed6-789d9d05b139.table:convercity.pg_catalog.pg_ts_config_map</node>
+            <node x="" y="">ff17d9aa-9871-4ce9-9ed6-789d9d05b139.table:convercity.pg_catalog.pg_shseclabel</node>
+            <node x="" y="">ff17d9aa-9871-4ce9-9ed6-789d9d05b139.table:convercity.pg_catalog.pg_pltemplate</node>
+            <node x="" y="">ff17d9aa-9871-4ce9-9ed6-789d9d05b139.table:convercity.pg_catalog.pg_seclabel</node>
+            <node x="" y="">ff17d9aa-9871-4ce9-9ed6-789d9d05b139.table:convercity.pg_catalog.pg_statio_all_indexes</node>
+            <node x="" y="">ff17d9aa-9871-4ce9-9ed6-789d9d05b139.table:convercity.pg_catalog.pg_statio_user_sequences</node>
+            <node x="" y="">ff17d9aa-9871-4ce9-9ed6-789d9d05b139.table:convercity.pg_catalog.pg_stat_database_conflicts</node>
+            <node x="" y="">ff17d9aa-9871-4ce9-9ed6-789d9d05b139.table:convercity.pg_catalog.pg_constraint</node>
+            <node x="" y="">ff17d9aa-9871-4ce9-9ed6-789d9d05b139.table:convercity.pg_catalog.pg_stat_replication</node>
+            <node x="" y="">ff17d9aa-9871-4ce9-9ed6-789d9d05b139.table:convercity.pg_catalog.pg_ts_parser</node>
+            <node x="" y="">ff17d9aa-9871-4ce9-9ed6-789d9d05b139.table:convercity.pg_catalog.pg_aggregate</node>
+            <node x="" y="">ff17d9aa-9871-4ce9-9ed6-789d9d05b139.table:convercity.pg_catalog.pg_rules</node>
+            <node x="" y="">ff17d9aa-9871-4ce9-9ed6-789d9d05b139.table:convercity.pg_catalog.pg_tables</node>
+            <node x="" y="">ff17d9aa-9871-4ce9-9ed6-789d9d05b139.table:convercity.pg_catalog.pg_cursors</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="0.10910605219322599" x="2542.562340966921" y="1788.5" />
+          <SelectedNodes />
+          <Categories>
+            <Category>Key columns</Category>
+            <Category>Columns</Category>
+          </Categories>
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://DATABASE/ff17d9aa-9871-4ce9-9ed6-789d9d05b139.schema:convercity.pg_catalog">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>DATABASE</ID>
+          <OriginalElement>ff17d9aa-9871-4ce9-9ed6-789d9d05b139.schema:convercity.pg_catalog</OriginalElement>
+          <nodes>
+            <node x="" y="">ff17d9aa-9871-4ce9-9ed6-789d9d05b139.table:convercity.pg_catalog.pg_stat_database</node>
+            <node x="" y="">ff17d9aa-9871-4ce9-9ed6-789d9d05b139.table:convercity.pg_catalog.pg_statio_all_tables</node>
+            <node x="" y="">ff17d9aa-9871-4ce9-9ed6-789d9d05b139.table:convercity.pg_catalog.pg_database</node>
+            <node x="" y="">ff17d9aa-9871-4ce9-9ed6-789d9d05b139.table:convercity.pg_catalog.pg_group</node>
+            <node x="" y="">ff17d9aa-9871-4ce9-9ed6-789d9d05b139.table:convercity.pg_catalog.pg_user_mappings</node>
+            <node x="" y="">ff17d9aa-9871-4ce9-9ed6-789d9d05b139.table:convercity.pg_catalog.pg_stat_all_indexes</node>
+            <node x="" y="">ff17d9aa-9871-4ce9-9ed6-789d9d05b139.table:convercity.pg_catalog.pg_ts_dict</node>
+            <node x="" y="">ff17d9aa-9871-4ce9-9ed6-789d9d05b139.table:convercity.pg_catalog.pg_stat_all_tables</node>
+            <node x="" y="">ff17d9aa-9871-4ce9-9ed6-789d9d05b139.table:convercity.pg_catalog.pg_default_acl</node>
+            <node x="" y="">ff17d9aa-9871-4ce9-9ed6-789d9d05b139.table:convercity.pg_catalog.pg_amproc</node>
+            <node x="" y="">ff17d9aa-9871-4ce9-9ed6-789d9d05b139.table:convercity.pg_catalog.pg_description</node>
+            <node x="" y="">ff17d9aa-9871-4ce9-9ed6-789d9d05b139.table:convercity.pg_catalog.pg_locks</node>
+            <node x="" y="">ff17d9aa-9871-4ce9-9ed6-789d9d05b139.table:convercity.pg_catalog.pg_prepared_statements</node>
+            <node x="" y="">ff17d9aa-9871-4ce9-9ed6-789d9d05b139.table:convercity.pg_catalog.pg_views</node>
+            <node x="" y="">ff17d9aa-9871-4ce9-9ed6-789d9d05b139.table:convercity.pg_catalog.pg_statio_sys_indexes</node>
+            <node x="" y="">ff17d9aa-9871-4ce9-9ed6-789d9d05b139.table:convercity.pg_catalog.pg_stat_activity</node>
+            <node x="" y="">ff17d9aa-9871-4ce9-9ed6-789d9d05b139.table:convercity.pg_catalog.pg_attrdef</node>
+            <node x="" y="">ff17d9aa-9871-4ce9-9ed6-789d9d05b139.table:convercity.pg_catalog.pg_user</node>
+            <node x="" y="">ff17d9aa-9871-4ce9-9ed6-789d9d05b139.table:convercity.pg_catalog.pg_shdepend</node>
+            <node x="" y="">ff17d9aa-9871-4ce9-9ed6-789d9d05b139.table:convercity.pg_catalog.pg_opclass</node>
+            <node x="" y="">ff17d9aa-9871-4ce9-9ed6-789d9d05b139.table:convercity.pg_catalog.pg_attribute</node>
+            <node x="" y="">ff17d9aa-9871-4ce9-9ed6-789d9d05b139.table:convercity.pg_catalog.pg_available_extension_versions</node>
+            <node x="" y="">ff17d9aa-9871-4ce9-9ed6-789d9d05b139.table:convercity.pg_catalog.pg_foreign_server</node>
+            <node x="" y="">ff17d9aa-9871-4ce9-9ed6-789d9d05b139.table:convercity.pg_catalog.pg_stat_user_functions</node>
+            <node x="" y="">ff17d9aa-9871-4ce9-9ed6-789d9d05b139.table:convercity.pg_catalog.pg_range</node>
+            <node x="" y="">ff17d9aa-9871-4ce9-9ed6-789d9d05b139.table:convercity.pg_catalog.pg_proc</node>
+            <node x="" y="">ff17d9aa-9871-4ce9-9ed6-789d9d05b139.table:convercity.pg_catalog.pg_ts_config</node>
+            <node x="" y="">ff17d9aa-9871-4ce9-9ed6-789d9d05b139.table:convercity.pg_catalog.pg_timezone_abbrevs</node>
+            <node x="" y="">ff17d9aa-9871-4ce9-9ed6-789d9d05b139.table:convercity.pg_catalog.pg_statio_user_tables</node>
+            <node x="" y="">ff17d9aa-9871-4ce9-9ed6-789d9d05b139.table:convercity.pg_catalog.pg_conversion</node>
+            <node x="" y="">ff17d9aa-9871-4ce9-9ed6-789d9d05b139.table:convercity.pg_catalog.pg_db_role_setting</node>
+            <node x="" y="">ff17d9aa-9871-4ce9-9ed6-789d9d05b139.table:convercity.pg_catalog.pg_replication_slots</node>
+            <node x="" y="">ff17d9aa-9871-4ce9-9ed6-789d9d05b139.table:convercity.pg_catalog.pg_settings</node>
+            <node x="" y="">ff17d9aa-9871-4ce9-9ed6-789d9d05b139.table:convercity.pg_catalog.pg_stat_user_indexes</node>
+            <node x="" y="">ff17d9aa-9871-4ce9-9ed6-789d9d05b139.table:convercity.pg_catalog.pg_shadow</node>
+            <node x="" y="">ff17d9aa-9871-4ce9-9ed6-789d9d05b139.table:convercity.pg_catalog.pg_class</node>
+            <node x="" y="">ff17d9aa-9871-4ce9-9ed6-789d9d05b139.table:convercity.pg_catalog.pg_cast</node>
+            <node x="" y="">ff17d9aa-9871-4ce9-9ed6-789d9d05b139.table:convercity.pg_catalog.pg_index</node>
+            <node x="" y="">ff17d9aa-9871-4ce9-9ed6-789d9d05b139.table:convercity.pg_catalog.pg_stat_xact_all_tables</node>
+            <node x="" y="">ff17d9aa-9871-4ce9-9ed6-789d9d05b139.table:convercity.pg_catalog.pg_event_trigger</node>
+            <node x="" y="">ff17d9aa-9871-4ce9-9ed6-789d9d05b139.table:convercity.pg_catalog.pg_available_extensions</node>
+            <node x="" y="">ff17d9aa-9871-4ce9-9ed6-789d9d05b139.table:convercity.pg_catalog.pg_operator</node>
+            <node x="" y="">ff17d9aa-9871-4ce9-9ed6-789d9d05b139.table:convercity.pg_catalog.pg_stat_user_tables</node>
+            <node x="" y="">ff17d9aa-9871-4ce9-9ed6-789d9d05b139.table:convercity.pg_catalog.pg_statio_all_sequences</node>
+            <node x="" y="">ff17d9aa-9871-4ce9-9ed6-789d9d05b139.table:convercity.pg_catalog.pg_extension</node>
+            <node x="" y="">ff17d9aa-9871-4ce9-9ed6-789d9d05b139.table:convercity.pg_catalog.pg_prepared_xacts</node>
+            <node x="" y="">ff17d9aa-9871-4ce9-9ed6-789d9d05b139.table:convercity.pg_catalog.pg_foreign_table</node>
+            <node x="" y="">ff17d9aa-9871-4ce9-9ed6-789d9d05b139.table:convercity.pg_catalog.pg_ts_template</node>
+            <node x="" y="">ff17d9aa-9871-4ce9-9ed6-789d9d05b139.table:convercity.pg_catalog.pg_stat_xact_sys_tables</node>
+            <node x="" y="">ff17d9aa-9871-4ce9-9ed6-789d9d05b139.table:convercity.pg_catalog.pg_stat_xact_user_tables</node>
+            <node x="" y="">ff17d9aa-9871-4ce9-9ed6-789d9d05b139.table:convercity.pg_catalog.pg_stat_archiver</node>
+            <node x="" y="">ff17d9aa-9871-4ce9-9ed6-789d9d05b139.table:convercity.pg_catalog.pg_am</node>
+            <node x="" y="">ff17d9aa-9871-4ce9-9ed6-789d9d05b139.table:convercity.pg_catalog.pg_auth_members</node>
+            <node x="" y="">ff17d9aa-9871-4ce9-9ed6-789d9d05b139.table:convercity.pg_catalog.pg_largeobject</node>
+            <node x="" y="">ff17d9aa-9871-4ce9-9ed6-789d9d05b139.table:convercity.pg_catalog.pg_trigger</node>
+            <node x="" y="">ff17d9aa-9871-4ce9-9ed6-789d9d05b139.table:convercity.pg_catalog.pg_amop</node>
+            <node x="" y="">ff17d9aa-9871-4ce9-9ed6-789d9d05b139.table:convercity.pg_catalog.pg_inherits</node>
+            <node x="" y="">ff17d9aa-9871-4ce9-9ed6-789d9d05b139.table:convercity.pg_catalog.pg_matviews</node>
+            <node x="" y="">ff17d9aa-9871-4ce9-9ed6-789d9d05b139.table:convercity.pg_catalog.pg_statistic</node>
+            <node x="" y="">ff17d9aa-9871-4ce9-9ed6-789d9d05b139.table:convercity.pg_catalog.pg_tablespace</node>
+            <node x="" y="">ff17d9aa-9871-4ce9-9ed6-789d9d05b139.table:convercity.pg_catalog.pg_largeobject_metadata</node>
+            <node x="" y="">ff17d9aa-9871-4ce9-9ed6-789d9d05b139.table:convercity.pg_catalog.pg_collation</node>
+            <node x="" y="">ff17d9aa-9871-4ce9-9ed6-789d9d05b139.table:convercity.pg_catalog.pg_enum</node>
+            <node x="" y="">ff17d9aa-9871-4ce9-9ed6-789d9d05b139.table:convercity.pg_catalog.pg_statio_sys_tables</node>
+            <node x="" y="">ff17d9aa-9871-4ce9-9ed6-789d9d05b139.table:convercity.pg_catalog.pg_shdescription</node>
+            <node x="" y="">ff17d9aa-9871-4ce9-9ed6-789d9d05b139.table:convercity.pg_catalog.pg_user_mapping</node>
+            <node x="" y="">ff17d9aa-9871-4ce9-9ed6-789d9d05b139.table:convercity.pg_catalog.pg_roles</node>
+            <node x="" y="">ff17d9aa-9871-4ce9-9ed6-789d9d05b139.table:convercity.pg_catalog.pg_indexes</node>
+            <node x="" y="">ff17d9aa-9871-4ce9-9ed6-789d9d05b139.table:convercity.pg_catalog.pg_rewrite</node>
+            <node x="" y="">ff17d9aa-9871-4ce9-9ed6-789d9d05b139.table:convercity.pg_catalog.pg_type</node>
+            <node x="" y="">ff17d9aa-9871-4ce9-9ed6-789d9d05b139.table:convercity.pg_catalog.pg_foreign_data_wrapper</node>
+            <node x="" y="">ff17d9aa-9871-4ce9-9ed6-789d9d05b139.table:convercity.pg_catalog.pg_statio_sys_sequences</node>
+            <node x="" y="">ff17d9aa-9871-4ce9-9ed6-789d9d05b139.table:convercity.pg_catalog.pg_stat_sys_indexes</node>
+            <node x="" y="">ff17d9aa-9871-4ce9-9ed6-789d9d05b139.table:convercity.pg_catalog.pg_stat_sys_tables</node>
+            <node x="" y="">ff17d9aa-9871-4ce9-9ed6-789d9d05b139.table:convercity.pg_catalog.pg_stats</node>
+            <node x="" y="">ff17d9aa-9871-4ce9-9ed6-789d9d05b139.table:convercity.pg_catalog.pg_opfamily</node>
+            <node x="" y="">ff17d9aa-9871-4ce9-9ed6-789d9d05b139.table:convercity.pg_catalog.pg_stat_xact_user_functions</node>
+            <node x="" y="">ff17d9aa-9871-4ce9-9ed6-789d9d05b139.table:convercity.pg_catalog.pg_depend</node>
+            <node x="" y="">ff17d9aa-9871-4ce9-9ed6-789d9d05b139.table:convercity.pg_catalog.pg_timezone_names</node>
+            <node x="" y="">ff17d9aa-9871-4ce9-9ed6-789d9d05b139.table:convercity.pg_catalog.pg_stat_bgwriter</node>
+            <node x="" y="">ff17d9aa-9871-4ce9-9ed6-789d9d05b139.table:convercity.pg_catalog.pg_authid</node>
+            <node x="" y="">ff17d9aa-9871-4ce9-9ed6-789d9d05b139.table:convercity.pg_catalog.pg_seclabels</node>
+            <node x="" y="">ff17d9aa-9871-4ce9-9ed6-789d9d05b139.table:convercity.pg_catalog.pg_language</node>
+            <node x="" y="">ff17d9aa-9871-4ce9-9ed6-789d9d05b139.table:convercity.pg_catalog.pg_namespace</node>
+            <node x="" y="">ff17d9aa-9871-4ce9-9ed6-789d9d05b139.table:convercity.pg_catalog.pg_statio_user_indexes</node>
+            <node x="" y="">ff17d9aa-9871-4ce9-9ed6-789d9d05b139.table:convercity.pg_catalog.pg_ts_config_map</node>
+            <node x="" y="">ff17d9aa-9871-4ce9-9ed6-789d9d05b139.table:convercity.pg_catalog.pg_shseclabel</node>
+            <node x="" y="">ff17d9aa-9871-4ce9-9ed6-789d9d05b139.table:convercity.pg_catalog.pg_pltemplate</node>
+            <node x="" y="">ff17d9aa-9871-4ce9-9ed6-789d9d05b139.table:convercity.pg_catalog.pg_seclabel</node>
+            <node x="" y="">ff17d9aa-9871-4ce9-9ed6-789d9d05b139.table:convercity.pg_catalog.pg_statio_all_indexes</node>
+            <node x="" y="">ff17d9aa-9871-4ce9-9ed6-789d9d05b139.table:convercity.pg_catalog.pg_statio_user_sequences</node>
+            <node x="" y="">ff17d9aa-9871-4ce9-9ed6-789d9d05b139.table:convercity.pg_catalog.pg_stat_database_conflicts</node>
+            <node x="" y="">ff17d9aa-9871-4ce9-9ed6-789d9d05b139.table:convercity.pg_catalog.pg_constraint</node>
+            <node x="" y="">ff17d9aa-9871-4ce9-9ed6-789d9d05b139.table:convercity.pg_catalog.pg_stat_replication</node>
+            <node x="" y="">ff17d9aa-9871-4ce9-9ed6-789d9d05b139.table:convercity.pg_catalog.pg_ts_parser</node>
+            <node x="" y="">ff17d9aa-9871-4ce9-9ed6-789d9d05b139.table:convercity.pg_catalog.pg_aggregate</node>
+            <node x="" y="">ff17d9aa-9871-4ce9-9ed6-789d9d05b139.table:convercity.pg_catalog.pg_rules</node>
+            <node x="" y="">ff17d9aa-9871-4ce9-9ed6-789d9d05b139.table:convercity.pg_catalog.pg_tables</node>
+            <node x="" y="">ff17d9aa-9871-4ce9-9ed6-789d9d05b139.table:convercity.pg_catalog.pg_cursors</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="0.17462520821765687" x="1790.9999999999998" y="1788.5" />
+          <SelectedNodes />
+          <Categories>
+            <Category>Columns</Category>
+          </Categories>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/ff17d9aa-9871-4ce9-9ed6-789d9d05b139/console.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/database.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.44680852">
+          <caret line="28" column="23" selection-start-line="28" selection-start-column="23" selection-end-line="28" selection-end-column="23" />
+          <folding>
+            <marker date="1427492188000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1427492188000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1427492188000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1427492188000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1427492188000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1427492188000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1427492188000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1427492188000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1427492188000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1427492188000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1427492188000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1427492188000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1427492188000" expanded="true" signature="-1:-1" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.env">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.10288066">
+          <caret line="5" column="22" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://DATABASE/ff17d9aa-9871-4ce9-9ed6-789d9d05b139.schema:convercity.public">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>DATABASE</ID>
+          <OriginalElement>ff17d9aa-9871-4ce9-9ed6-789d9d05b139.schema:convercity.public</OriginalElement>
+          <nodes>
+            <node x="" y="">ff17d9aa-9871-4ce9-9ed6-789d9d05b139.table:convercity.public.keyword_reply</node>
+            <node x="" y="">ff17d9aa-9871-4ce9-9ed6-789d9d05b139.table:convercity.public.migrations</node>
+            <node x="" y="">ff17d9aa-9871-4ce9-9ed6-789d9d05b139.table:convercity.public.message_reply</node>
+            <node x="" y="">ff17d9aa-9871-4ce9-9ed6-789d9d05b139.table:convercity.public.messages</node>
+            <node x="" y="">ff17d9aa-9871-4ce9-9ed6-789d9d05b139.table:convercity.public.replies</node>
+            <node x="" y="">ff17d9aa-9871-4ce9-9ed6-789d9d05b139.table:convercity.public.citizens</node>
+            <node x="" y="">ff17d9aa-9871-4ce9-9ed6-789d9d05b139.table:convercity.public.users</node>
+            <node x="" y="">ff17d9aa-9871-4ce9-9ed6-789d9d05b139.table:convercity.public.password_resets</node>
+            <node x="" y="">ff17d9aa-9871-4ce9-9ed6-789d9d05b139.table:convercity.public.keywords</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="0.8074454428754814" x="379.5" y="257.0" />
+          <SelectedNodes />
+          <Categories>
+            <Category>Key columns</Category>
+            <Category>Columns</Category>
+          </Categories>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2015_03_29_124921_create_incomings_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5106383">
+          <caret line="25" column="33" selection-start-line="25" selection-start-column="33" selection-end-line="25" selection-end-column="33" />
+          <folding>
+            <marker date="1427633751000" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1427633751000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1427633751000" expanded="true" signature="-1:-1" placeholder=" Run the migrations. ..." />
+            <marker date="1427633751000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427633751000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1427633751000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427633751000" expanded="true" signature="-1:-1" placeholder=" Reverse the migrations. ..." />
+            <marker date="1427633751000" expanded="true" signature="-1:-1" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2015_03_29_125705_create_sms_logs_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3617021">
+          <caret line="18" column="29" selection-start-line="18" selection-start-column="29" selection-end-line="18" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/composer.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.12765957">
+          <caret line="12" column="42" selection-start-line="12" selection-start-column="42" selection-end-line="12" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/welcome.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1426302170000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1426302170000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1426302170000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1426302170000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1426302170000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1426302170000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1426302170000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1426302170000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1426302170000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1426302170000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1426302170000" expanded="true" signature="-1:-1" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/home.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1426302170000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1426302170000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1426302170000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1426302170000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1426302170000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1426302170000" expanded="true" signature="-1:-1" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/css/dashboard.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.95884776">
+          <caret line="105" column="0" selection-start-line="105" selection-start-column="0" selection-end-line="105" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/css/cover.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.9544765">
+          <caret line="162" column="1" selection-start-line="162" selection-start-column="1" selection-end-line="162" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/FrontEndController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.35433072">
+          <caret line="18" column="4" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/cover.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1427641261000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1427641261000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1427641261000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1427641261000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1427641261000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1427641261000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1427641261000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1427641261000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1427641261000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1427641261000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1427641261000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1427641261000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1427641261000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1427641261000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1427641261000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1427641261000" expanded="true" signature="-1:-1" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/auth/login.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.56692916">
+          <caret line="24" column="5" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
+          <folding>
+            <marker date="1427642669000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1427642669000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1427642669000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1427642669000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1427642669000" expanded="true" signature="-1:-1" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/layouts/login.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6929134">
+          <caret line="169" column="16" selection-start-line="169" selection-start-column="16" selection-end-line="169" selection-end-column="16" />
+          <folding>
+            <marker date="1427642618000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1427642618000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1427642618000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1427642618000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427642618000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427642618000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427642618000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427642618000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427642618000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427642618000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427642618000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427642618000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427642618000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427642618000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427642618000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427642618000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427642618000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427642618000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427642618000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427642618000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427642618000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427642618000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1427642618000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1427642618000" expanded="true" signature="-1:-1" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/auth/register.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.047244094">
+          <caret line="2" column="14" selection-start-line="2" selection-start-column="14" selection-end-line="2" selection-end-column="14" />
+          <folding>
+            <marker date="1427642721000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1427642721000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1427642721000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1427642721000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1427642721000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1427642721000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1427642721000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1427642721000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1427642721000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1427642721000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1427642721000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1427642721000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1427642721000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1427642721000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1427642721000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1427642721000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1427642721000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1427642721000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1427642721000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1427642721000" expanded="true" signature="-1:-1" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/seeds/DatabaseSeeder.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.35433072">
+          <caret line="16" column="8" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="8" />
+          <folding>
+            <marker date="1427642898000" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1427642898000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1427642898000" expanded="true" signature="-1:-1" placeholder=" Run the database seeds. ..." />
+            <marker date="1427642898000" expanded="true" signature="-1:-1" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Middleware/Authenticate.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.2992126">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1427414266000" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1427414266000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1427414266000" expanded="true" signature="-1:-1" placeholder=" The Guard implementation. ..." />
+            <marker date="1427414266000" expanded="true" signature="-1:-1" placeholder=" Create a new filter instance. ..." />
+            <marker date="1427414266000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427414266000" expanded="true" signature="-1:-1" placeholder=" Handle an incoming request. ..." />
+            <marker date="1427414266000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427414266000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427414266000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427414266000" expanded="true" signature="-1:-1" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Services/Registrar.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.31496063">
+          <caret line="18" column="18" selection-start-line="18" selection-start-column="18" selection-end-line="18" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/User.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.47244096">
+          <caret line="24" column="54" selection-start-line="24" selection-start-column="54" selection-end-line="24" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/SmsLog.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="26" selection-start-line="0" selection-start-column="16" selection-end-line="0" selection-end-column="26" />
+          <folding>
+            <marker date="1427633825000" expanded="true" signature="-1:-1" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2014_10_12_100000_create_password_resets_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1426302170000" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1426302170000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1426302170000" expanded="true" signature="-1:-1" placeholder=" Run the migrations. ..." />
+            <marker date="1426302170000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1426302170000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1426302170000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1426302170000" expanded="true" signature="-1:-1" placeholder=" Reverse the migrations. ..." />
+            <marker date="1426302170000" expanded="true" signature="-1:-1" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4015748">
+          <caret line="18" column="32" selection-start-line="18" selection-start-column="32" selection-end-line="18" selection-end-column="32" />
+          <folding>
+            <marker date="1427643400000" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1427643400000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1427643400000" expanded="true" signature="-1:-1" placeholder=" Run the migrations. ..." />
+            <marker date="1427643400000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427643400000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1427643400000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427643400000" expanded="true" signature="-1:-1" placeholder=" Reverse the migrations. ..." />
+            <marker date="1427643400000" expanded="true" signature="-1:-1" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/seeds/UserTableSeeder.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.42519686">
+          <caret line="19" column="76" selection-start-line="19" selection-start-column="76" selection-end-line="19" selection-end-column="76" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/auth/password.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="18" selection-start-line="0" selection-start-column="18" selection-end-line="0" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/auth/reset.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="18" selection-start-line="0" selection-start-column="18" selection-end-line="0" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Auth/AuthController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.42519686">
+          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+          <folding>
+            <marker date="1427414266000" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1427414266000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1427414266000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1427414266000" expanded="true" signature="-1:-1" placeholder=" Create a new authentication controller instance. ..." />
+            <marker date="1427414266000" expanded="true" signature="-1:-1" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Requests/Request.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Middleware/RedirectIfAuthenticated.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6929134">
+          <caret line="37" column="49" selection-start-line="37" selection-start-column="49" selection-end-line="37" selection-end-column="49" />
+          <folding>
+            <marker date="1427643997000" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1427643997000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1427643997000" expanded="true" signature="-1:-1" placeholder=" The Guard implementation. ..." />
+            <marker date="1427643997000" expanded="true" signature="-1:-1" placeholder=" Create a new filter instance. ..." />
+            <marker date="1427643997000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427643997000" expanded="true" signature="-1:-1" placeholder=" Handle an incoming request. ..." />
+            <marker date="1427643997000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1427643997000" expanded="true" signature="-1:-1" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.23622048">
+          <caret line="19" column="51" selection-start-line="19" selection-start-column="51" selection-end-line="19" selection-end-column="51" />
+          <folding>
+            <marker date="1427644136000" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1427644136000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1427644136000" expanded="true" signature="-1:-1" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/layouts/app.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AppPagesController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.23622048">
+          <caret line="10" column="19" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="19" />
+          <folding>
+            <marker date="1427644209000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1427644209000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1427644209000" expanded="true" signature="-1:-1" placeholder=" Display a listing of the resource. ..." />
+            <marker date="1427644209000" expanded="true" signature="-1:-1" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/storage/framework/views/474bc97a96fb78aa7caada804ff9aee1">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.1138088">
+          <caret line="5" column="2" selection-start-line="5" selection-start-column="2" selection-end-line="5" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/app/dashboard.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="22" selection-start-line="0" selection-start-column="22" selection-end-line="0" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

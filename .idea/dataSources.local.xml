@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="PostgreSQL - convercity@localhost" uuid="ff17d9aa-9871-4ce9-9ed6-789d9d05b139">
+      <secret-storage>master_key</secret-storage>
+      <user-name>homestead</user-name>
+      <schema-pattern>convercity.pg_catalog convercity.public</schema-pattern>
+      <default-schemas>convercity.pg_catalog convercity.public</default-schemas>
+    </data-source>
+  </component>
+</project>
