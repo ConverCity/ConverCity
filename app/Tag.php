@@ -2,8 +2,8 @@
 
 use Illuminate\Database\Eloquent\Model;
 
-class SmsLog extends Model {
+class Tag extends Model {
 
-	protected $fillable = ['log'];
+	protected $fillable = ['tag'];
 
 }

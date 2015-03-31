@@ -15,6 +15,14 @@
 Route::controllers([
 	'auth' => 'Auth\AuthController',
 	'password' => 'Auth\PasswordController',
+	'app/citizen/upload' => 'CitizensUploadController'
+]);
+
+Route::resources([
+	'app/citizen' => 'CitizenController',
+	'app/message' => 'MessageController',
+	'app/reply' => 'ReplyController',
+	'app/tag' => 'TagController'
 ]);
 
 Route::get('/app', 'AppPagesController@dashboard');

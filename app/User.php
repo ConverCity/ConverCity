@@ -31,4 +31,16 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
 	 */
 	protected $hidden = ['password', 'remember_token'];
 
+
+	/**
+	 *
+	 *
+	 *
+	 * @return \Illuminate\Database\Eloquent\Relations\HasOne
+     */
+	public function citizen()
+	{
+		return $this->belongsTo('\convercity\Citizen');
+	}
+
 }

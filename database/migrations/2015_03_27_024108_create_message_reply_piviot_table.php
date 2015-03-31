@@ -16,7 +16,7 @@ class CreateMessageReplyPiviotTable extends Migration {
 		{
 			$table->integer('message_id')->unsigned();
 			$table->foreign('message_id')->references('id')->on('messages')->onDelete('cascade');
-			$table->integer('reply_id');
+			$table->integer('reply_id')->unsigned();
 			$table->foreign('reply_id')->references('id')->on('replies')->onDelete('cascade');
 			$table->timestamps();
 		});

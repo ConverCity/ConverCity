@@ -14,8 +14,8 @@ class CreateCitizensTable extends Migration {
 	{
 		Schema::create('citizens', function(Blueprint $table)
 		{
-			$table->increments('id')->unsigned();
-			$table->integer('user_id');
+			$table->increments('id');
+			$table->integer('user_id')->nullable()->unsigned();
 			$table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
 			$table->string('phone_number')->unique();
 			$table->timestamps();

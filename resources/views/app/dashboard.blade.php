@@ -2,6 +2,4 @@
 
 @section('main')
 
- Test
-
 @stop
