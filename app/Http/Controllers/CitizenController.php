@@ -1,5 +1,6 @@
 <?php namespace convercity\Http\Controllers;
 
+use convercity\Citizen;
 use convercity\Http\Requests;
 use convercity\Http\Controllers\Controller;
 
@@ -14,7 +15,7 @@ class CitizenController extends Controller {
 	 */
 	public function index()
 	{
-		//
+		return Citizen::all();
 	}
 
 	/**
@@ -32,9 +33,10 @@ class CitizenController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function store()
+	public function store(Request $request)
 	{
-		//
+		Citizen::create($request->get('citizen'));
+		return response('success', 200);
 	}
 
 	/**
@@ -45,7 +47,7 @@ class CitizenController extends Controller {
 	 */
 	public function show($id)
 	{
-		//
+		return Citizen::find($id);
 	}
 
 	/**
@@ -56,7 +58,6 @@ class CitizenController extends Controller {
 	 */
 	public function edit($id)
 	{
-		//
 	}
 
 	/**
@@ -65,9 +66,10 @@ class CitizenController extends Controller {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function update($id)
+	public function update($id, Request $request)
 	{
-		//
+		Citizen::find($id)->update($request->get('citizen'));
+		return response('Success', 200);
 	}
 
 	/**
@@ -78,7 +80,9 @@ class CitizenController extends Controller {
 	 */
 	public function destroy($id)
 	{
-		//
+		if(Citizen::find($id)->destroy())
+		{return response('Success', 200);}
+
 	}
 
 }
