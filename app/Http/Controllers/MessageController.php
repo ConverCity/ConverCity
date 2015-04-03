@@ -3,6 +3,9 @@
 use convercity\Http\Requests;
 use convercity\Http\Controllers\Controller;
 
+use convercity\Keyword;
+use convercity\Message;
+use convercity\Tag;
 use Illuminate\Http\Request;
 
 class MessageController extends Controller {
@@ -14,7 +17,7 @@ class MessageController extends Controller {
 	 */
 	public function index()
 	{
-		//
+		return Message::all();
 	}
 
 	/**
@@ -24,7 +27,7 @@ class MessageController extends Controller {
 	 */
 	public function create()
 	{
-		//
+
 	}
 
 	/**
@@ -32,9 +35,19 @@ class MessageController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function store()
+	public function store(Request $request)
 	{
-		//
+		if($message = Message::create($request->get('message')))
+		{
+			if($request->ajax())
+			{
+				return response($message->id, 200);
+			}
+			else
+			{
+				return redirect()->back();
+			}
+		}
 	}
 
 	/**
@@ -56,7 +69,7 @@ class MessageController extends Controller {
 	 */
 	public function edit($id)
 	{
-		//
+
 	}
 
 	/**
@@ -65,9 +78,10 @@ class MessageController extends Controller {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function update($id)
+	public function update($id, Request $request)
 	{
-		//
+		Message::find($id)->update($request->get('message'));
+		return response('Success');
 	}
 
 	/**
@@ -78,7 +92,8 @@ class MessageController extends Controller {
 	 */
 	public function destroy($id)
 	{
-		//
+		Message::find($id)->destroy();
+		return response("Success");
 	}
 
 }

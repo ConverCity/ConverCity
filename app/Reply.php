@@ -4,6 +4,12 @@ use Illuminate\Database\Eloquent\Model;
 
 class Reply extends Model {
 
-	protected $fillable = ['reply'];
+	protected $fillable = ['open', 'reply'];
+
+
+	public function keywords()
+	{
+		return $this->belongsToMany('\convercity\Keyword');
+	}
 
 }

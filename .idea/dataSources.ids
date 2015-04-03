@@ -1628,8 +1628,6 @@
     <table name="keyword_reply" schema="public" catalog="convercity" type="TABLE">
       <column name="keyword_id" sqlType="int4" precision="10" scale="0" nullable="false" jdbcType="4"/>
       <column name="reply_id" sqlType="int4" precision="10" scale="0" nullable="false" jdbcType="4"/>
-      <column name="created_at" sqlType="timestamp" precision="22" scale="0" nullable="false" jdbcType="93"/>
-      <column name="updated_at" sqlType="timestamp" precision="22" scale="0" nullable="false" jdbcType="93"/>
       <foreign-key name="keyword_reply_keyword_id_foreign" columns="keyword_id" ref-table="keywords" ref-schema="public" ref-catalog="" ref-columns="id" update-rule="3" delete-rule="0" deferrability="2"/>
       <foreign-key name="keyword_reply_reply_id_foreign" columns="reply_id" ref-table="replies" ref-schema="public" ref-catalog="" ref-columns="id" update-rule="3" delete-rule="0" deferrability="2"/>
     </table>
@@ -1656,8 +1654,6 @@
     <table name="message_reply" schema="public" catalog="convercity" type="TABLE">
       <column name="message_id" sqlType="int4" precision="10" scale="0" nullable="false" jdbcType="4"/>
       <column name="reply_id" sqlType="int4" precision="10" scale="0" nullable="false" jdbcType="4"/>
-      <column name="created_at" sqlType="timestamp" precision="22" scale="0" nullable="false" jdbcType="93"/>
-      <column name="updated_at" sqlType="timestamp" precision="22" scale="0" nullable="false" jdbcType="93"/>
       <foreign-key name="message_reply_message_id_foreign" columns="message_id" ref-table="messages" ref-schema="public" ref-catalog="" ref-columns="id" update-rule="3" delete-rule="0" deferrability="2"/>
       <foreign-key name="message_reply_reply_id_foreign" columns="reply_id" ref-table="replies" ref-schema="public" ref-catalog="" ref-columns="id" update-rule="3" delete-rule="0" deferrability="2"/>
     </table>
@@ -1698,6 +1694,7 @@
       <column name="reply" sqlType="varchar" precision="255" scale="0" nullable="false" jdbcType="12"/>
       <column name="created_at" sqlType="timestamp" precision="22" scale="0" nullable="false" jdbcType="93"/>
       <column name="updated_at" sqlType="timestamp" precision="22" scale="0" nullable="false" jdbcType="93"/>
+      <column name="open" sqlType="bool" precision="1" scale="0" nullable="false" jdbcType="-7" def="ZmFsc2U="/>
       <primary-key name="replies_pkey" columns="id"/>
       <exported-key name="incomings_reply_id_foreign" table="incomings" schema="public" catalog="convercity" columns="reply_id"/>
       <exported-key name="keyword_reply_reply_id_foreign" table="keyword_reply" schema="public" catalog="convercity" columns="reply_id"/>

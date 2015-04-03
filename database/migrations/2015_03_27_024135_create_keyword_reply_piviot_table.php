@@ -18,7 +18,6 @@ class CreateKeywordReplyPiviotTable extends Migration {
 			$table->foreign('keyword_id')->references('id')->on('keywords')->onDelete('cascade');
 			$table->integer('reply_id')->unsigned();
 			$table->foreign('reply_id')->references('id')->on('replies')->onDelete('cascade');
-			$table->timestamps();
 		});
 	}
 

@@ -15,7 +15,8 @@
 Route::controllers([
 	'auth' => 'Auth\AuthController',
 	'password' => 'Auth\PasswordController',
-	'app/citizen/upload' => 'CitizensUploadController'
+	'app/citizen/upload' => 'CitizensUploadController',
+	'app/message-builder' => 'MessageBuilderController'
 ]);
 
 Route::resources([
