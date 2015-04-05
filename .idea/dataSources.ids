@@ -1569,6 +1569,33 @@
       <column name="viewowner" sqlType="name" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
       <column name="definition" sqlType="text" precision="2147483647" scale="0" nullable="true" jdbcType="12"/>
     </table>
+    <table name="broadcast_citizen" schema="public" catalog="convercity" type="TABLE">
+      <column name="broadcast_id" sqlType="int4" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="citizen_id" sqlType="int4" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <foreign-key name="broadcast_citizen_broadcast_id_foreign" columns="broadcast_id" ref-table="broadcasts" ref-schema="public" ref-catalog="" ref-columns="id" update-rule="3" delete-rule="0" deferrability="2"/>
+      <foreign-key name="broadcast_citizen_citizen_id_foreign" columns="citizen_id" ref-table="citizens" ref-schema="public" ref-catalog="" ref-columns="id" update-rule="3" delete-rule="0" deferrability="2"/>
+    </table>
+    <table name="broadcasts" schema="public" catalog="convercity" type="TABLE">
+      <column name="id" sqlType="serial" precision="10" scale="0" nullable="false" jdbcType="4" def="bmV4dHZhbCgnYnJvYWRjYXN0c19pZF9zZXEnOjpyZWdjbGFzcyk=" autoIncrement="true"/>
+      <column name="message" sqlType="varchar" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="status" sqlType="varchar" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="created_at" sqlType="timestamp" precision="22" scale="0" nullable="false" jdbcType="93"/>
+      <column name="updated_at" sqlType="timestamp" precision="22" scale="0" nullable="false" jdbcType="93"/>
+      <primary-key name="broadcasts_pkey" columns="id"/>
+      <exported-key name="broadcast_citizen_broadcast_id_foreign" table="broadcast_citizen" schema="public" catalog="convercity" columns="broadcast_id"/>
+    </table>
+    <table name="broadcasts_id_seq" schema="public" catalog="convercity" type="SEQUENCE">
+      <column name="sequence_name" sqlType="name" precision="2147483647" scale="0" nullable="false" jdbcType="12"/>
+      <column name="last_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="start_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="increment_by" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="max_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="min_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="cache_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="log_cnt" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="is_cycled" sqlType="bool" precision="1" scale="0" nullable="false" jdbcType="-7"/>
+      <column name="is_called" sqlType="bool" precision="1" scale="0" nullable="false" jdbcType="-7"/>
+    </table>
     <table name="citizen_tag" schema="public" catalog="convercity" type="TABLE">
       <column name="citizen_id" sqlType="int4" precision="10" scale="0" nullable="false" jdbcType="4"/>
       <column name="tag_id" sqlType="int4" precision="10" scale="0" nullable="false" jdbcType="4"/>
@@ -1583,11 +1610,34 @@
       <column name="updated_at" sqlType="timestamp" precision="22" scale="0" nullable="false" jdbcType="93"/>
       <primary-key name="citizens_pkey" columns="id"/>
       <foreign-key name="citizens_user_id_foreign" columns="user_id" ref-table="users" ref-schema="public" ref-catalog="" ref-columns="id" update-rule="3" delete-rule="0" deferrability="2"/>
+      <exported-key name="broadcast_citizen_citizen_id_foreign" table="broadcast_citizen" schema="public" catalog="convercity" columns="citizen_id"/>
       <exported-key name="citizen_tag_citizen_id_foreign" table="citizen_tag" schema="public" catalog="convercity" columns="citizen_id"/>
       <exported-key name="incomings_citizen_id_foreign" table="incomings" schema="public" catalog="convercity" columns="citizen_id"/>
       <index name="citizens_phone_number_unique" unique="true" columns="phone_number"/>
     </table>
     <table name="citizens_id_seq" schema="public" catalog="convercity" type="SEQUENCE">
+      <column name="sequence_name" sqlType="name" precision="2147483647" scale="0" nullable="false" jdbcType="12"/>
+      <column name="last_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="start_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="increment_by" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="max_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="min_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="cache_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="log_cnt" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="is_cycled" sqlType="bool" precision="1" scale="0" nullable="false" jdbcType="-7"/>
+      <column name="is_called" sqlType="bool" precision="1" scale="0" nullable="false" jdbcType="-7"/>
+    </table>
+    <table name="fields" schema="public" catalog="convercity" type="TABLE">
+      <column name="id" sqlType="serial" precision="10" scale="0" nullable="false" jdbcType="4" def="bmV4dHZhbCgnZmllbGRzX2lkX3NlcSc6OnJlZ2NsYXNzKQ==" autoIncrement="true"/>
+      <column name="name" sqlType="varchar" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="key" sqlType="varchar" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="table_id" sqlType="int4" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="created_at" sqlType="timestamp" precision="22" scale="0" nullable="false" jdbcType="93"/>
+      <column name="updated_at" sqlType="timestamp" precision="22" scale="0" nullable="false" jdbcType="93"/>
+      <primary-key name="fields_pkey" columns="id"/>
+      <foreign-key name="fields_table_id_foreign" columns="table_id" ref-table="tables" ref-schema="public" ref-catalog="" ref-columns="id" update-rule="3" delete-rule="0" deferrability="2"/>
+    </table>
+    <table name="fields_id_seq" schema="public" catalog="convercity" type="SEQUENCE">
       <column name="sequence_name" sqlType="name" precision="2147483647" scale="0" nullable="false" jdbcType="12"/>
       <column name="last_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
       <column name="start_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
@@ -1721,6 +1771,27 @@
       <primary-key name="sms_logs_pkey" columns="id"/>
     </table>
     <table name="sms_logs_id_seq" schema="public" catalog="convercity" type="SEQUENCE">
+      <column name="sequence_name" sqlType="name" precision="2147483647" scale="0" nullable="false" jdbcType="12"/>
+      <column name="last_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="start_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="increment_by" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="max_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="min_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="cache_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="log_cnt" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
+      <column name="is_cycled" sqlType="bool" precision="1" scale="0" nullable="false" jdbcType="-7"/>
+      <column name="is_called" sqlType="bool" precision="1" scale="0" nullable="false" jdbcType="-7"/>
+    </table>
+    <table name="tables" schema="public" catalog="convercity" type="TABLE">
+      <column name="id" sqlType="serial" precision="10" scale="0" nullable="false" jdbcType="4" def="bmV4dHZhbCgndGFibGVzX2lkX3NlcSc6OnJlZ2NsYXNzKQ==" autoIncrement="true"/>
+      <column name="name" sqlType="varchar" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="db_name" sqlType="varchar" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="created_at" sqlType="timestamp" precision="22" scale="0" nullable="false" jdbcType="93"/>
+      <column name="updated_at" sqlType="timestamp" precision="22" scale="0" nullable="false" jdbcType="93"/>
+      <primary-key name="tables_pkey" columns="id"/>
+      <exported-key name="fields_table_id_foreign" table="fields" schema="public" catalog="convercity" columns="table_id"/>
+    </table>
+    <table name="tables_id_seq" schema="public" catalog="convercity" type="SEQUENCE">
       <column name="sequence_name" sqlType="name" precision="2147483647" scale="0" nullable="false" jdbcType="12"/>
       <column name="last_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
       <column name="start_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>

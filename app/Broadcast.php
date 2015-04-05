@@ -2,9 +2,9 @@
 
 use Illuminate\Database\Eloquent\Model;
 
-class Tag extends Model {
+class Broadcast extends Model {
 
-	protected $fillable = ['tag'];
+	protected $fillable = ['message', 'status'];
 
 	public function citizens()
 	{
