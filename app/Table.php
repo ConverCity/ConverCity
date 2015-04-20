@@ -6,7 +6,7 @@ class Table extends Model {
 
 	protected $fillable = ['name', 'db_name'];
 
-    public function field()
+    public function fields()
     {
         return $this->hasMany('\convercity\Field');
     }

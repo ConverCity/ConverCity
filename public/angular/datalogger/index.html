@@ -1,0 +1,23 @@
+<div ng-controller="DataloggerController">
+
+    <div ng-repeat="table in tables">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                {{ name }}
+            </div>
+            <div class="panel-body">
+                <ul>
+                    <div ng-repeat="field in fields">
+                        <li>
+                            {{ name }} [ {{ key }} ]
+                        </li>
+                    </div>
+                </ul>
+            </div>
+            <div class="panel-footer">
+                <button class="btn btn-success">Add Field</button>
+            </div>
+        </div>
+    </div>
+
+</div>

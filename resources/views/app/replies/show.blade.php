@@ -1,5 +1,14 @@
 @extends('layouts.app')
 
+<?php
+    
+    $page = [
+        'id'    => 'replie_detail',
+        'name' => 'Reply Detail: ' . $reply->reply,
+        ]
+
+?>
+
 @section('main')
 
     <div class="col-sm-offset-1 col-sm-10">

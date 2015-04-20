@@ -11,13 +11,19 @@
 |
 */
 
+Route::resources([
+	'app/datalogger/table' => 'TableController',
+	'app/datalogger/field' => 'FieldController'
+]);
+
 
 Route::controllers([
 	'auth' => 'Auth\AuthController',
 	'password' => 'Auth\PasswordController',
 	'app/citizen/upload' => 'CitizensUploadController',
 	'app/message-builder' => 'MessageBuilderController',
-	'app/send' => 'SendController'
+	'app/send' => 'SendController',
+	'app/datalogger' => 'DataloggerController'
 ]);
 
 Route::resources([

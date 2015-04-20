@@ -1,3 +1,12 @@
+<?php
+    
+    $page = [
+        'id'    => 'message_builder',
+        'name' => 'Message Builder',
+        ]
+
+?>
+
 @extends("layouts.app")
 
 @section('main')
@@ -40,17 +49,16 @@
                         @endforeach
 
                     </div>
-                    <hr>
-                    <div class="panel-body">
+                        <div class="panel-footer">
+                        <button onClick="viewReply({{$i->id}})" class="btn btn-primary"> Details </button>
+                        <button onClick="deleteReply({{$i->id}})" class="btn btn-danger"> Delete </button>
+                    </div>
+                    <div class="panel-body" id="footer-{{$i->id}}">
                         <form class="form-inline">
                             <select id="message-{{$i->id}}" name="message-{{$i->id}}" class="messages form-control">
                             </select>
-                            <button class="btn btn-primary">Add</button>
+                            <button class="btn btn-primary" onClick="addMessage({{$i->id}}); return false;">Add</button>
                         </form>
-                    </div>
-                    <div class="panel-footer">
-                        <button onClick="viewReply({{$i->id}})" class="btn btn-primary"> Details </button>
-                        <button onClick="deleteReply({{$i->id}})" class="btn btn-danger"> Delete </button>
                     </div>
                 </div>
             </div>
@@ -69,28 +77,30 @@
 @stop
 
 @section('style')
-    <link href="//cdnjs.cloudflare.com/ajax/libs/select2/4.0.0-rc.2/css/select2.min.css" rel="stylesheet" />
+    <!-- <link href="//cdnjs.cloudflare.com/ajax/libs/select2/4.0.0-rc.2/css/select2.min.css" rel="stylesheet" /> -->
+    <link href="/css/select2.css" rel="stylesheet" />
+
 @stop
 
 @section('js-head')
 @stop
 
 @section('js-foot')
-    <script src="//cdnjs.cloudflare.com/ajax/libs/select2/4.0.0-rc.2/js/select2.min.js"></script>
+
+    <script src="/js/select2.min.js"></script>
+    <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/select2/4.0.0-rc.2/js/select2.min.js"></script> -->
 
     <script type="text/javascript">
         $(document).ready(function() {
             $('.tags').select2({
+
                 tags: true
             });
 
             $('.messages').select2({
-                data:{!! $messages !!}
+                data: {!! $messages !!}
             });
         });
-
-
-
 
         function deleteReply(id)
         {
@@ -110,6 +120,22 @@
         {
             var url = "/app/reply/" + id;
             window.location = url;
+        }
+
+        function addMessage(reply_id)
+        {
+            var url = "/app/message/";
+            var message_id = $('#message-' + reply_id).val();
+
+            $.ajax({
+                url: url,
+                type: "POST",
+                data: {_token: "{{csrf_token()}}", reply_id: reply_id, message_id: message_id}
+            }).success(function(data){
+                $('#footer-' + reply_id).innerHTML = data;
+            });
+
+
         }
 
     </script>

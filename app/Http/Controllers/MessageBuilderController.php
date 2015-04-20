@@ -19,10 +19,18 @@ class MessageBuilderController extends Controller {
 			$messages[] = ['id' => $message->id, 'text' => $message->message];
 		}
 
-		$messages = json_encode($message);
+		$messages = json_encode($messages);
 
 		return view('app.replies.builder', compact('replies', 'messages'));
 
 	}
+
+	public function postAttachMessage(Request $request)
+	{
+		$reply = Reply::find($request->get('reply_id'))->associate(Message::find($request->get('message_id')));
+
+		return view(api.message_attached)->with('i', $reply);
+	}
+
 
 }

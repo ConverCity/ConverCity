@@ -1,3 +1,12 @@
+<?php
+    
+    $page = [
+        'id'    => 'citizen_upload',
+        'name' => 'Citizen Upload',
+        ]
+
+?>
+
 @extends('layouts.app')
 
 @section('main')

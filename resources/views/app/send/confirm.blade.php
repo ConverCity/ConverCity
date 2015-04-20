@@ -1,3 +1,12 @@
+<?php
+    
+    $page = [
+        'id'    => 'send_message',
+        'name' => 'Confirm Message',
+        ]
+
+?>
+
 @extends('layouts.app')
 
 @section('main')
@@ -29,7 +38,10 @@
 
                 </div>
                 <div class="panel-footer">
+                    <form>
+                    <input type="hidden" name="send" value="{!! $send !!}">
                     <input type="submit" value="Confirm Send" class="btn btn-primary">
+                    </form>
                 </div>
             </form>
         </div>
@@ -43,4 +55,4 @@
 @section('js-foot')
 
 
-    @stop
+@stop

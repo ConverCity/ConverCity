@@ -6,6 +6,8 @@ use convercity\Http\Requests;
 use convercity\Http\Controllers\Controller;
 
 use convercity\Tag;
+use convercity\Table;
+use convercity\Keyword;
 use Illuminate\Http\Request;
 
 class SendController extends Controller {
@@ -17,18 +19,32 @@ class SendController extends Controller {
 		{
 			$tags[] = ['id' => $tag->id, 'text' => $tag->tag];
 		}
+		$dataSets = [];
+		foreach(Table::all() as $set)
+		{
+			$dataSets[] = ['id' => $set->id, 'text' => $set->name];
+		}
+		$keywords = [];
+		foreach(Keyword::all() as $set)
+		{
+			$keywords[] = ['id' => $set->id, 'text' => $set->keyword];
+		}
 
 		$tags = json_encode($tags);
+		$dataSets = json_encode($dataSets);
+		$keywords = json_encode($keywords);
 
-		return view('app.send.send', compact('tags'));
+
+		return view('app.send.send', compact('tags', 'dataSets','keywords'));
 	}
 
 	public function postConfirm(Request $request)
 	{
-		$tag_id = $request->get('tags');
+		$send = $request->get('send');
+		$tag_id = $send['tags'];
 		$tags = Tag::find($tag_id);
 		$citizens =  Sender::tagsToCitizens($tags);
-		$message = $request->get('message');
+		$message = $send['message'];
 		$broadcast = Broadcast::create([
 			'status' => 'Draft',
 			'message' => $message,
@@ -39,7 +55,9 @@ class SendController extends Controller {
 			$broadcast->citizens()->save($citizen);
 		}
 
-		return view('app.send.confirm', compact('citizens', 'message', 'tags'));
+		$send = json_encode($send);
+
+		return view('app.send.confirm', compact('citizens', 'message', 'tags', 'send'));
 
 	}
 }

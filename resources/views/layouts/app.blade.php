@@ -10,11 +10,11 @@
     <meta name="author" content="">
     <link rel="icon" href="/favicon.ico">
 
-    <title>Dashboard Template for Bootstrap</title>
+    <title>Convercity - {{$page['name'] or 'Talk to the people'}}</title>
 
     <!-- Bootstrap core CSS -->
     <link href="/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/themes/smoothness/jquery-ui.css" />
+    <link rel="stylesheet" href="/css/jquery-ui.css" />
 
     @yield('style')
 
@@ -50,9 +50,7 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="#">Dashboard</a></li>
-                <li><a href="#">Settings</a></li>
-                <li><a href="#">Profile</a></li>
+
                 <li><a href="#">Help</a></li>
             </ul>
             <form class="navbar-form navbar-right">
@@ -66,10 +64,11 @@
     <div class="row">
         <div class="col-sm-3 col-md-2 sidebar">
             <ul class="nav nav-sidebar">
-                <li class="active"><a href="#">Overview <span class="sr-only">(current)</span></a></li>
-                <li><a href="#">Reports</a></li>
-                <li><a href="#">Analytics</a></li>
-                <li><a href="#">Export</a></li>
+                <li ><a href="#">Overview <span class="sr-only">(current)</span></a></li>
+                <li @if($page['id'] == 'send_message') class="active" @endif><a href="/app/send/send">Send Message</a></li>
+                <li @if($page['id'] == 'citizen_upload') class="active" @endif><a href="/app/citizen/upload">Citizen Uploader</a></li>
+                <li @if($page['id'] == 'dataset_manager') class="active" @endif><a href="/app/datalogger/">Data Set Manager</a></li>
+                <li @if($page['id'] == 'message_builder') class="active" @endif><a href="/app/message-builder/">Message Builder</a></li>
             </ul>
             <ul class="nav nav-sidebar">
                 <li><a href="">Nav item</a></li>
@@ -90,12 +89,16 @@
     </div>
 </div>
 
+@yield('model')
+
 <!-- Bootstrap core JavaScript
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script>
+<script src="/js/jquery-2.1.0.min.js"></script>
+<script src="/js/jquery-ui.js"></script>
 <script src="/js/bootstrap.min.js"></script>
+<!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script> -->
+
 @yield('js-foot')
 
 </body>
