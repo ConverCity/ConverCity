@@ -1,6 +1,6 @@
  <div class="form-group">
 	<label>Data Field</label>
-	<select name="send[fields][{{$table_id}}]" id="fields" class="form-control" required>
+	<select name="field_id" id="fields" class="form-control" required>
 	<option value="">Select a field</option>
 	@foreach($fields as $field)
 	<option value="{{$field->id}}">{{$field->name}}</option>

@@ -60,9 +60,8 @@
     @stop
 
 @section('style')
-    <!-- <link href="//cdnjs.cloudflare.com/ajax/libs/select2/4.0.0-rc.2/css/select2.min.css" rel="stylesheet" /> -->
-
     <link href="/css/select2.css" rel="stylesheet" />
+    <!-- <link href="//cdnjs.cloudflare.com/ajax/libs/select2/4.0.0-rc.2/css/select2.min.css" rel="stylesheet" /> -->
 @stop
 
 @section('js-foot')
@@ -112,18 +111,13 @@
                         $('#field-wait').addClass('hidden');
                         $('#field-responses').removeClass('hidden');
                         $('.keywords').select2({
-                            placeholder: 'Begin typing...',
+                            placeholder: 'Add keywords...',
                             tags: true,
                             data: {!! $keywords !!},
                         });
                     });
                 }) 
             });
-        })
-
-        var $eventSelect = $('#tags');
-        $eventSelect.on("change", function (e) { console.log(e); });
-
-                
+        })          
 </script>
     @stop

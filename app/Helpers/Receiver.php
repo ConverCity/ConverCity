@@ -3,7 +3,7 @@
 namespace convercity\Helpers;
 
 
-class Sender {
+class Receiver {
 
 
     public static function getLastMessage($body, $message = null)

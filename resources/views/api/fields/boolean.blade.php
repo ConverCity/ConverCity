@@ -5,8 +5,13 @@
 			<b> True </b>
 			</div>
 			<div class="panel-body">
-			 <select id="true" name='send[true][]' class="keywords form-control" multiple="">
-			 </select>
+				<div class="form-group">
+						<input class="form-control" name="true[message]" placeholder="Expected reply...">
+					</div>
+				<div class="form-group">
+				 <select id="true" name='true[keywords][]' class="keywords form-control" multiple="">
+			 	</select>
+			 	</div>
 			</div>
 		</div>
 	</div>
@@ -16,8 +21,13 @@
 				<b> False </b>
 			</div>
 			<div class="panel-body">
-				<select id="false" name='send[false][]' class="keywords form-control" multiple="">
-				</select>
+				<div class="form-group">
+					<input class="form-control" name="false[message]" placeholder="Expected reply...">
+				</div>
+				<div class="form-group">
+					<select id="false" name='false[keywords][]' class="keywords form-control" multiple="">
+					</select>
+				</div>
 			</div>
 		</div>
 	</div>

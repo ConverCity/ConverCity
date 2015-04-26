@@ -64,9 +64,9 @@
             </div>
         @empty
             <div class="col-sm-4">
-                <div class="well">
+                <div class="alert alert-info">
 
-                    No replies currently exist
+                    No replies currently exist.
 
                 </div>
             </div>
@@ -77,12 +77,9 @@
 @stop
 
 @section('style')
-    <!-- <link href="//cdnjs.cloudflare.com/ajax/libs/select2/4.0.0-rc.2/css/select2.min.css" rel="stylesheet" /> -->
     <link href="/css/select2.css" rel="stylesheet" />
+    <!-- <link href="//cdnjs.cloudflare.com/ajax/libs/select2/4.0.0-rc.2/css/select2.min.css" rel="stylesheet" /> -->
 
-@stop
-
-@section('js-head')
 @stop
 
 @section('js-foot')
@@ -91,6 +88,7 @@
     <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/select2/4.0.0-rc.2/js/select2.min.js"></script> -->
 
     <script type="text/javascript">
+        // Initialize Select2 fields
         $(document).ready(function() {
             $('.tags').select2({
 
@@ -134,8 +132,6 @@
             }).success(function(data){
                 $('#footer-' + reply_id).innerHTML = data;
             });
-
-
         }
 
     </script>

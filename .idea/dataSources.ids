@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <component name="dataSourceStorage">
   <data-source name="PostgreSQL - convercity@localhost" uuid="ff17d9aa-9871-4ce9-9ed6-789d9d05b139">
-    <database-info product="PostgreSQL" version="9.4.1" jdbc-version="4.0" driver-name="PostgreSQL Native Driver" driver-version="PostgreSQL 9.3 JDBC4 (build 1100)">
+    <database-info product="PostgreSQL" version="9.4.1" jdbc-version="4.0" driver-name="PostgreSQL Native Driver" driver-version="PostgreSQL 9.4 JDBC4 (build 1201)">
       <identifier-quote-string>&quot;</identifier-quote-string>
     </database-info>
     <case-sensitivity plain-identifiers="lower" quoted-identifiers="exact"/>
@@ -1612,6 +1612,8 @@
       <foreign-key name="citizens_user_id_foreign" columns="user_id" ref-table="users" ref-schema="public" ref-catalog="" ref-columns="id" update-rule="3" delete-rule="0" deferrability="2"/>
       <exported-key name="broadcast_citizen_citizen_id_foreign" table="broadcast_citizen" schema="public" catalog="convercity" columns="citizen_id"/>
       <exported-key name="citizen_tag_citizen_id_foreign" table="citizen_tag" schema="public" catalog="convercity" columns="citizen_id"/>
+      <exported-key name="datalogger_dataset_citizen_id_foreign" table="datalogger_dataset" schema="public" catalog="convercity" columns="citizen_id"/>
+      <exported-key name="datalogger_new_dataset_citizen_id_foreign" table="datalogger_new_dataset" schema="public" catalog="convercity" columns="citizen_id"/>
       <exported-key name="incomings_citizen_id_foreign" table="incomings" schema="public" catalog="convercity" columns="citizen_id"/>
       <index name="citizens_phone_number_unique" unique="true" columns="phone_number"/>
     </table>
@@ -1627,7 +1629,16 @@
       <column name="is_cycled" sqlType="bool" precision="1" scale="0" nullable="false" jdbcType="-7"/>
       <column name="is_called" sqlType="bool" precision="1" scale="0" nullable="false" jdbcType="-7"/>
     </table>
-    <table name="datalogger_create_data_set_id_seq" schema="public" catalog="convercity" type="SEQUENCE">
+    <table name="datalogger_dataset" schema="public" catalog="convercity" type="TABLE">
+      <column name="id" sqlType="serial" precision="10" scale="0" nullable="false" jdbcType="4" def="bmV4dHZhbCgnZGF0YWxvZ2dlcl9kYXRhc2V0X2lkX3NlcSc6OnJlZ2NsYXNzKQ==" autoIncrement="true"/>
+      <column name="citizen_id" sqlType="int4" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="created_at" sqlType="timestamp" precision="22" scale="0" nullable="false" jdbcType="93"/>
+      <column name="updated_at" sqlType="timestamp" precision="22" scale="0" nullable="false" jdbcType="93"/>
+      <column name="test" sqlType="varchar" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <primary-key name="datalogger_dataset_pkey" columns="id"/>
+      <foreign-key name="datalogger_dataset_citizen_id_foreign" columns="citizen_id" ref-table="citizens" ref-schema="public" ref-catalog="" ref-columns="id" update-rule="3" delete-rule="0" deferrability="2"/>
+    </table>
+    <table name="datalogger_dataset_id_seq" schema="public" catalog="convercity" type="SEQUENCE">
       <column name="sequence_name" sqlType="name" precision="2147483647" scale="0" nullable="false" jdbcType="12"/>
       <column name="last_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
       <column name="start_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
@@ -1639,7 +1650,16 @@
       <column name="is_cycled" sqlType="bool" precision="1" scale="0" nullable="false" jdbcType="-7"/>
       <column name="is_called" sqlType="bool" precision="1" scale="0" nullable="false" jdbcType="-7"/>
     </table>
-    <table name="datalogger_new_data_set_id_seq" schema="public" catalog="convercity" type="SEQUENCE">
+    <table name="datalogger_new_dataset" schema="public" catalog="convercity" type="TABLE">
+      <column name="id" sqlType="serial" precision="10" scale="0" nullable="false" jdbcType="4" def="bmV4dHZhbCgnZGF0YWxvZ2dlcl9uZXdfZGF0YXNldF9pZF9zZXEnOjpyZWdjbGFzcyk=" autoIncrement="true"/>
+      <column name="citizen_id" sqlType="int4" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="created_at" sqlType="timestamp" precision="22" scale="0" nullable="false" jdbcType="93"/>
+      <column name="updated_at" sqlType="timestamp" precision="22" scale="0" nullable="false" jdbcType="93"/>
+      <column name="test" sqlType="varchar" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <primary-key name="datalogger_new_dataset_pkey" columns="id"/>
+      <foreign-key name="datalogger_new_dataset_citizen_id_foreign" columns="citizen_id" ref-table="citizens" ref-schema="public" ref-catalog="" ref-columns="id" update-rule="3" delete-rule="0" deferrability="2"/>
+    </table>
+    <table name="datalogger_new_dataset_id_seq" schema="public" catalog="convercity" type="SEQUENCE">
       <column name="sequence_name" sqlType="name" precision="2147483647" scale="0" nullable="false" jdbcType="12"/>
       <column name="last_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
       <column name="start_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
@@ -1651,19 +1671,20 @@
       <column name="is_cycled" sqlType="bool" precision="1" scale="0" nullable="false" jdbcType="-7"/>
       <column name="is_called" sqlType="bool" precision="1" scale="0" nullable="false" jdbcType="-7"/>
     </table>
-    <table name="datalogger_new_test_data_set_id_seq" schema="public" catalog="convercity" type="SEQUENCE">
-      <column name="sequence_name" sqlType="name" precision="2147483647" scale="0" nullable="false" jdbcType="12"/>
-      <column name="last_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
-      <column name="start_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
-      <column name="increment_by" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
-      <column name="max_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
-      <column name="min_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
-      <column name="cache_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
-      <column name="log_cnt" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
-      <column name="is_cycled" sqlType="bool" precision="1" scale="0" nullable="false" jdbcType="-7"/>
-      <column name="is_called" sqlType="bool" precision="1" scale="0" nullable="false" jdbcType="-7"/>
+    <table name="datamarkers" schema="public" catalog="convercity" type="TABLE">
+      <column name="id" sqlType="serial" precision="10" scale="0" nullable="false" jdbcType="4" def="bmV4dHZhbCgnZGF0YW1hcmtlcnNfaWRfc2VxJzo6cmVnY2xhc3Mp" autoIncrement="true"/>
+      <column name="message_id" sqlType="int4" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="reply_id" sqlType="int4" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="field_id" sqlType="int4" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="value" sqlType="varchar" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="created_at" sqlType="timestamp" precision="22" scale="0" nullable="false" jdbcType="93"/>
+      <column name="updated_at" sqlType="timestamp" precision="22" scale="0" nullable="false" jdbcType="93"/>
+      <primary-key name="datamarkers_pkey" columns="id"/>
+      <foreign-key name="datamarkers_field_id_foreign" columns="field_id" ref-table="fields" ref-schema="public" ref-catalog="" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
+      <foreign-key name="datamarkers_message_id_foreign" columns="message_id" ref-table="messages" ref-schema="public" ref-catalog="" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
+      <foreign-key name="datamarkers_reply_id_foreign" columns="reply_id" ref-table="replies" ref-schema="public" ref-catalog="" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
     </table>
-    <table name="datalogger_test_data_set_id_seq" schema="public" catalog="convercity" type="SEQUENCE">
+    <table name="datamarkers_id_seq" schema="public" catalog="convercity" type="SEQUENCE">
       <column name="sequence_name" sqlType="name" precision="2147483647" scale="0" nullable="false" jdbcType="12"/>
       <column name="last_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
       <column name="start_value" sqlType="int8" precision="19" scale="0" nullable="false" jdbcType="-5"/>
@@ -1685,6 +1706,7 @@
       <column name="updated_at" sqlType="timestamp" precision="22" scale="0" nullable="false" jdbcType="93"/>
       <primary-key name="fields_pkey" columns="id"/>
       <foreign-key name="fields_table_id_foreign" columns="table_id" ref-table="tables" ref-schema="public" ref-catalog="" ref-columns="id" update-rule="3" delete-rule="0" deferrability="2"/>
+      <exported-key name="datamarkers_field_id_foreign" table="datamarkers" schema="public" catalog="convercity" columns="field_id"/>
     </table>
     <table name="fields_id_seq" schema="public" catalog="convercity" type="SEQUENCE">
       <column name="sequence_name" sqlType="name" precision="2147483647" scale="0" nullable="false" jdbcType="12"/>
@@ -1759,9 +1781,13 @@
     <table name="messages" schema="public" catalog="convercity" type="TABLE">
       <column name="id" sqlType="serial" precision="10" scale="0" nullable="false" jdbcType="4" def="bmV4dHZhbCgnbWVzc2FnZXNfaWRfc2VxJzo6cmVnY2xhc3Mp" autoIncrement="true"/>
       <column name="message" sqlType="varchar" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="manual" sqlType="bool" precision="1" scale="0" nullable="false" jdbcType="-7" def="ZmFsc2U="/>
+      <column name="recipients" sqlType="varchar" precision="255" scale="0" nullable="true" jdbcType="12"/>
       <column name="created_at" sqlType="timestamp" precision="22" scale="0" nullable="false" jdbcType="93"/>
       <column name="updated_at" sqlType="timestamp" precision="22" scale="0" nullable="false" jdbcType="93"/>
+      <column name="status" sqlType="varchar" precision="50" scale="0" nullable="true" jdbcType="12"/>
       <primary-key name="messages_pkey" columns="id"/>
+      <exported-key name="datamarkers_message_id_foreign" table="datamarkers" schema="public" catalog="convercity" columns="message_id"/>
       <exported-key name="incomings_message_id_foreign" table="incomings" schema="public" catalog="convercity" columns="message_id"/>
       <exported-key name="message_reply_message_id_foreign" table="message_reply" schema="public" catalog="convercity" columns="message_id"/>
     </table>
@@ -1795,6 +1821,7 @@
       <column name="updated_at" sqlType="timestamp" precision="22" scale="0" nullable="false" jdbcType="93"/>
       <column name="open" sqlType="bool" precision="1" scale="0" nullable="false" jdbcType="-7" def="ZmFsc2U="/>
       <primary-key name="replies_pkey" columns="id"/>
+      <exported-key name="datamarkers_reply_id_foreign" table="datamarkers" schema="public" catalog="convercity" columns="reply_id"/>
       <exported-key name="incomings_reply_id_foreign" table="incomings" schema="public" catalog="convercity" columns="reply_id"/>
       <exported-key name="keyword_reply_reply_id_foreign" table="keyword_reply" schema="public" catalog="convercity" columns="reply_id"/>
       <exported-key name="message_reply_reply_id_foreign" table="message_reply" schema="public" catalog="convercity" columns="reply_id"/>

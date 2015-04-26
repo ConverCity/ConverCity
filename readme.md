@@ -1,23 +1,59 @@
-## Laravel PHP Framework
+## Convercity
+### An SMS 311 Conversation Platform
 
-[![Build Status](https://travis-ci.org/laravel/framework.svg)](https://travis-ci.org/laravel/framework)
-[![Total Downloads](https://poser.pugx.org/laravel/framework/downloads.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Stable Version](https://poser.pugx.org/laravel/framework/v/stable.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Unstable Version](https://poser.pugx.org/laravel/framework/v/unstable.svg)](https://packagist.org/packages/laravel/framework)
-[![License](https://poser.pugx.org/laravel/framework/license.svg)](https://packagist.org/packages/laravel/framework)
+View example deployment at https://mysterious-tor-1649.herokuapp.com/
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as authentication, routing, sessions, queueing, and caching.
+### Employed Technology
 
-Laravel is accessible, yet powerful, providing powerful tools needed for large, robust applications. A superb inversion of control container, expressive migration system, and tightly integrated unit testing support give you the tools you need to build any application with which you are tasked.
+#### [Larvel PHP Framework](http://laravel.com)
 
-## Official Documentation
+While in the hackathon/prototype mindset we used Laravel to provide a rapid development environment where we could rely heavily on its MVC framework and RESTful controller methodology.
 
-Documentation for the framework can be found on the [Laravel website](http://laravel.com/docs).
+#### [Twilio](https://www.twilio.com/)
 
-## Contributing
+We used Twiliio through it's API to both send incoming text messages into the application and process sending replies.
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](http://laravel.com/docs/contributions).
+#### [D3.js](http://d3js.org/)
 
-### License
+The D3js library has been employed so far in just one element of Convercity, a word cloud of raw text responses to question. However, as the app continues to be developed we intend to use D3 heavily to provide data visualization and mapping.
 
-The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
+#### [JQuery](http://jquery.com/)
+
+JQuery is used throughout the interface to facilitate AJAX calls.
+
+#### [Bootstrap by Twitter](http://getbootstrap.com)
+
+For prototyping we utilized Twitter's Bootstrap library for the UI
+
+#### [Heroku](http://www.heroku.com)
+
+The application is currently hosting on Heroku using a ClearDB SQL Database
+
+
+### Existing functionality
+
+#### Natural language interpretation
+
+Convercity can receive natural language text messages, dissects the message, and return response or clarifying questions without forcing users into using multiple choice option trees. This logic is contained in our [SMS311 facade.](https://github.com/ConverCity/ConverCity/blob/master/app/SMS311.php) Essentially, the process scores the message one point for each matching word in the message against a list of keywords for each potential response. Which even response ends with the highest response is returned to the user.
+
+#### Data Capture
+
+All messages sent into the system are processed from the [SMS Interface](https://github.com/ConverCity/ConverCity/blob/master/app/Http/Controllers/SmsController.php) which will look for a citizen record in the database (based on their phone number) and then begin to log the interaction. If a citizen doesn't reply immediately, Convercity will remember where the conversation left off and evaluate answers against the last communication before deciding to begin a new communication.
+
+Administrators can create specific data points they are interested in investigating, such as, if domestic abuse victims have access to places where the can find safety.  That data point can then be attached to a question and each response to the question can be evaluated for how it should be recorded against the data point.
+
+Every communication is stored in its raw form and associated with the message it was responding to, the message that came after it, and the citizen who sent it. This will allow us to create a data visualization interface that will be able to dig into conversation archives to search for data points rather than only viewing data after a data point is created.
+
+#### Question Tree 
+
+City Administrators have access to an editing interface where they can create and edit responses, keywords, and data points through a point and click interface easily understanding the logic in play at each step of the tree.
+
+### Future functionality
+
+#### IBM Watson Integration
+
+To better enable accurate routing between questions, we plan to overlay IBM's Watson technology on top of the SMS routing facade.  Watson will consume the natural text and route to a specific response based on the keywords of potential replies.
+
+#### D3js Visualization
+
+A data visualization section of the application will allow city users to quickly generate pages with topic specifics with D3 generated charts and visualizations.

@@ -6,11 +6,19 @@ namespace convercity\Helpers;
 
 use convercity\Field;
 use convercity\Table;
+use convercity\Datamark;
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 
 class Datalogger extends Migration {
+
+    /*
+    * Generate a new table and log its creation.
+    *
+    * @param string $name
+    * 
+    */
 
     static function createDataTable($name)
     {
@@ -37,15 +45,18 @@ class Datalogger extends Migration {
     }
 
     /**
-     * @param array $table
-     * @return bool
+     * 
+     * Generate field on custom table and log field generation
+     * 
+     * @param string $table
+     * @return string
      */
     static function createDataField($table)
     {
-        $table = explode(',', $table);
+        $table      = explode(',', $table);
         $field      = $table[1];
         $fieldType  = $table[2];
-        $tableName      = Table::find($table[0])->db_name;
+        $tableName  = Table::find($table[0])->db_name;
         $fieldName  = Datalogger::cleanName($field);
 
         if(!Field::where(['table_id' => $table[0], 'key' => $field])->exists() )
@@ -63,7 +74,9 @@ class Datalogger extends Migration {
     }
 
     /**
-     * @param $name
+     * Clean proposed name and return clean name
+     *
+     * @param string $name
      * @return string
      */
     static function cleanName($name)
@@ -72,6 +85,28 @@ class Datalogger extends Migration {
 
         return $cleanName;
 
+    }
+
+    /**
+     *
+     * Return array of datamarks related to a reply
+     * or to a reply only to specific messages.
+     *
+     * @param int $reply, int $message
+     * @return array
+     */
+    static function getDatamarks($reply, $message = null)
+    {
+        if($message)
+        {
+            $marks = Datamark::where('reply_id', $reply)->where('message_id', $message)->get();
+        }
+        else
+        {
+            $marks = Datamark::where('reply_id', $reply)->get();
+        }
+
+        return $marks;
     }
 
 }

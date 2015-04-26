@@ -20,7 +20,7 @@ class ReplyController extends Controller {
 	}
 
 	/**
-	 * Store a newly reply and keywords
+	 * Store a new reply and keywords
 	 *
 	 * @return if Ajax return new reply ID
 	 *
@@ -32,8 +32,11 @@ class ReplyController extends Controller {
 		$reply = $request->get('reply');
 		$keywords = $request->get('keyword') or [];
 
+		// Store reply
 		$reply = Reply::create($reply);
 
+
+		// Attach keywords to reply
 		if($keywords != null)
 		{
 			foreach($keywords as $i)
@@ -43,6 +46,7 @@ class ReplyController extends Controller {
 			}
 		}
 
+		// Ajax return test
 		if($request->ajax())
 			{return response($reply->id, 200);}
 		else
@@ -57,7 +61,10 @@ class ReplyController extends Controller {
 	 */
 	public function show($id, Request $request)
 	{
+		// Retreve reply
 		$reply = Reply::find($id);
+
+		// Return reply
 		if($request->ajax())
 			{
 			return $reply;
@@ -66,17 +73,6 @@ class ReplyController extends Controller {
 		{
 			return view('app.replies.show', compact('reply'));
 		}
-	}
-
-	/**
-	 * Show the form for editing the specified resource.
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
-	public function edit($id )
-	{
-		//
 	}
 
 	/**
@@ -89,22 +85,29 @@ class ReplyController extends Controller {
 	 */
 	public function update($id, Request $request)
 	{
+		// Load reply object
 		$reply = Reply::find($id)->update($request->get('reply'));
+
+		// Retreive keywords
 		$keywords = $request->get('keyword') or [];
 
-		if($keywords->count() > 0)
+		// Find or create keyword objects
+		if($keywords->count() != 0)
 		{
 			foreach($keywords as $i)
 			{
 				$keywords[] = Keyword::firstOrCreate($i);
 			}
 
+			// Attach Keywords to Reply
 			$reply->sync($keywords);
 		}
+
+		// Ajax return test
 		if($request->ajax())
-		{return response($reply->id, 200);}
+			{return response($reply->id, 200);}
 		else
-		{return redirect()->back();}
+			{return redirect()->back();}
 	}
 
 	/**
@@ -117,7 +120,12 @@ class ReplyController extends Controller {
 	{
 		Reply::find($id)->delete();
 
-			return response("Success");
+		// Ajax return test
+		if($request->ajax())
+			{return response("Success");}
+		else
+			{return redirect('/app/message-builder');}
+			
 
 	}
 

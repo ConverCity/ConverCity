@@ -10,4 +10,9 @@ class Field extends Model {
     {
         return $this->belongsTo('\convercity\Table');
     }
+
+    public function datamarkers()
+    {
+    	return $this->hasMany('\convercity\Datamarker');
+    }
 }
